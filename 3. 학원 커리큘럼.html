@@ -3,16 +3,54 @@
 <head>
   <title>끄적끄적 - Welcome</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="공통스타일.css">
+  <link rel="stylesheet" href="공통스타일.css?after">
 </head>
 <body>
+  <input id="day_night" type="button" value="야간 모드" onclick="
+    var target = document.querySelector('body')
+    if (this.value === '야간 모드'){
+      target.style.backgroundColor = '#424242';
+      target.style.color = 'white';
+      document.querySelector('#day_night').value = '주간 모드';
+      document.querySelector('a').style.color = 'white';
+      document.querySelector('h2').style.color = 'white';
+      document.querySelector('#grid').style.color = 'white';
+      document.querySelector('ol').style.color = 'white';
+      document.querySelector('.plan').style.color = 'white';
+      document.querySelector('.mine').style.color = 'white';
+      document.querySelector('.thing').style.color = 'white';
+      document.querySelector('.link').style.color = 'yellow';
+      document.querySelector('.active').style.color = '#2E2E2E';
+      document.querySelector('.active').style.backgroundColor = 'white';
+      document.querySelector('.active').style.paddingLeft = '5px';
+      document.querySelector('.active').style.paddingRight = '5px';
+      document.querySelector('#disqus_thread').style.backgroundColor = '#D8D8D8';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      document.querySelector('#day_night').value = '야간 모드';
+      document.querySelector('a').style.color = 'black';
+      document.querySelector('h2').style.color = 'black';
+      document.querySelector('#grid').style.color = 'black';
+      document.querySelector('ol').style.color = 'black';
+      document.querySelector('.plan').style.color = 'black';
+      document.querySelector('.mine').style.color = 'black';
+      document.querySelector('.thing').style.color = 'black';
+      document.querySelector('.link').style.color = '#FF4000';
+      document.querySelector('.active').style.color = 'white';
+      document.querySelector('.active').style.backgroundColor = '#424242';
+      document.querySelector('.active').style.paddingLeft = '5px';
+      document.querySelector('.active').style.paddingRight = '5px';
+      document.querySelector('#disqus_thread').style.backgroundColor = 'white';
+    }
+    ">
   <h1><a href="index.html" title="메인으로 이동">끄적끄적</a></h1>
     <div id="grid">
       <ol>
-        <h2><b><li><a href="1. 우선적인 계획.html">우선적인 계획</a></li><br>
-        <li><a href="2. 나만의 커리큘럼.html">나만의 커리큘럼</a></li><br>
+        <h2><b><li><a href="1. 우선적인 계획.html" class="plan">우선적인 계획</a></li><br>
+        <li><a href="2. 나만의 커리큘럼.html" class="mine">나만의 커리큘럼</a></li><br>
         <li><a href="3. 학원 커리큘럼.html" class="active">학원 커리큘럼</a></li><br>
-        <li><a href="4. 알아두면 유용한 것.html">알아두면 유용한 것</a></li><br>
+        <li><a href="4. 알아두면 유용한 것.html" class="thing">알아두면 유용한 것</a></li><br>
         <li><a href="https://opentutorials.org/course/1" target="_blank" title="생활코딩 사이트로 이동" class="link">
         생활코딩 보러가기</a></b></li></h2>
       </ol>

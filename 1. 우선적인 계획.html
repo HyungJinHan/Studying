@@ -3,16 +3,56 @@
 <head>
   <title>끄적끄적 - Welcome</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="공통스타일.css">
+  <link rel="stylesheet" href="공통스타일.css?after">
 </head>
 <body>
+  <input id="day_night" type="button" value="야간 모드" onclick="
+  var target = document.querySelector('body')
+    if (this.value === '야간 모드'){
+      target.style.backgroundColor = '#424242';
+      target.style.color = 'white';
+      document.querySelector('#day_night').value = '주간 모드';
+      document.querySelector('a').style.color = 'white';
+      document.querySelector('h2').style.color = 'white';
+      document.querySelector('#grid').style.color = 'white';
+      document.querySelector('ol').style.color = 'white';
+      document.querySelector('.mine').style.color = 'white';
+      document.querySelector('.school').style.color = 'white';
+      document.querySelector('.thing').style.color = 'white';
+      document.querySelector('.link').style.color = 'yellow';
+      document.querySelector('.link1').style.color = 'yellow';
+      document.querySelector('.active').style.color = '#2E2E2E';
+      document.querySelector('.active').style.backgroundColor = 'white';
+      document.querySelector('.active').style.paddingLeft = '5px';
+      document.querySelector('.active').style.paddingRight = '5px';
+      document.querySelector('#disqus_thread').style.backgroundColor = '#D8D8D8';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      document.querySelector('#day_night').value = '야간 모드';
+      document.querySelector('a').style.color = 'black';
+      document.querySelector('h2').style.color = 'black';
+      document.querySelector('#grid').style.color = 'black';
+      document.querySelector('ol').style.color = 'black';
+      document.querySelector('.mine').style.color = 'black';
+      document.querySelector('.school').style.color = 'black';
+      document.querySelector('.thing').style.color = 'black';
+      document.querySelector('.link').style.color = '#FF4000';
+      document.querySelector('.link1').style.color = '#FF4000';
+      document.querySelector('.active').style.color = 'white';
+      document.querySelector('.active').style.backgroundColor = '#424242';
+      document.querySelector('.active').style.paddingLeft = '5px';
+      document.querySelector('.active').style.paddingRight = '5px';
+      document.querySelector('#disqus_thread').style.backgroundColor = 'white';
+    }
+    ">
   <h1><a href="index.html" title="메인으로 이동">끄적끄적</a></h1>
     <div id="grid">
       <ol>
         <h2><b><li><a href="1. 우선적인 계획.html" class="active">우선적인 계획</a></li><br>
-        <li><a href="2. 나만의 커리큘럼.html">나만의 커리큘럼</a></li><br>
-        <li><a href="3. 학원 커리큘럼.html">학원 커리큘럼</a></li><br>
-        <li><a href="4. 알아두면 유용한 것.html">알아두면 유용한 것</a></li><br>
+        <li><a href="2. 나만의 커리큘럼.html" class="mine">나만의 커리큘럼</a></li><br>
+        <li><a href="3. 학원 커리큘럼.html" class="school">학원 커리큘럼</a></li><br>
+        <li><a href="4. 알아두면 유용한 것.html" class="thing">알아두면 유용한 것</a></li><br>
         <li><a href="https://opentutorials.org/course/1" target="_blank" title="생활코딩 사이트로 이동" class="link">
         생활코딩 보러가기</a></b></li></h2>
       </ol>
@@ -21,7 +61,7 @@
           <br><img src="계획.jpg" width="50%">
         </div>
         <p>1) <b><u>독학부터 (기초작업)</u></b> & Github 공부
-        (<a href="https://stackoverflow.com/" target="_blank" title="사이트로 이동">Stack Over Flow</a>에 검색해가면서 공부하는 것도 추천)<br><br>
+        (<a href="https://stackoverflow.com/" target="_blank" title="사이트로 이동" class="link1"><b>Stack Over Flow</b></a>에 검색해가면서 공부하는 것도 추천)<br><br>
         2) <b><u>학원 수강</u></b> (5~6개월)<br><br>
         3) <b><u>포트폴리오 & 자소서, 이력서</u></b> (2~3개월+a)<br><br>
         4) <b><u>코딩 테스트 준비도 괜춘할 듯?</u></b> (정처기는 고민이나 생각정도)</p><br>

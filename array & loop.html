@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="color.js"></script>
+  </head>
+  <body>
+    <link rel="stylesheet" href="연습장용.css?after">
+
+    <input id=day_night type="button" value="야간 모드" onclick="
+    day_nightHandler(this);
+    ">
+
+    <h1>array & loop</h1>
+
+      <script>
+        var family = ['hyun','sung','jin','ju','sik','kyung','hun','hye']
+      </script>
+
+    <h2>Family</h2>
+    <ul>
+
+      <script>
+        var i = 0;
+        while (i < family.length) {
+          document.write('<li><a href="http://127.0.0.1/index.html'+family[i]+'">'+family[i]+'</a></li>')
+          i = i + 1;
+        }
+      </script>
+
+    <ul>
+  </body>
+</html>

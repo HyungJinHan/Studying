@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="color.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="연습장용.css?after">
+
+    <input id=day_night type="button" value="야간 모드" onclick="
+    day_nightHandler(this);
+    ">
+
+    <h1>Object (객체)</h1>
+    <h2>Create</h2>
+
+    <script>
+      var family = {
+        "man":"hyun, sik, jin, ju, hun",
+        "woman":"sung, kyung, hye"
+      };
+      document.write("XX : "+family.man+"<br>"+"<br>");
+      document.write("XY : "+family.woman+"<br>"+"<br>");
+      family.mother = "sung, kyung";
+      document.write("Mother : "+family.mother+"<br>"+"<br>");
+      family.father = "hyun, sik";
+      document.write("Father : "+family.father+"<br>"+"<br>");
+      family["first child"] = "jin, hun";
+      document.write("First Child : "+family["first child"]+"<br>"+"<br>");
+      family["second child"] = "ju, hye";
+      document.write("Second Child : "+family["second child"]+"<br>"+"<br>");
+    </script>
+
+    <h2>Iterate - 가족 구성 (반복)</h2>
+
+    <script>
+      for(var key in family) {
+        document.write(key+"<br>"+"<br>")
+      }
+    </script>
+
+    <h2>Iterate - 가족 인원 (반복)</h2>
+
+    <script>
+      for(var key in family) {
+        document.write(family[key]+"<br>"+"<br>")
+      }
+    </script>
+
+    <h2>Property (객체에 소속된 변수) & Method (객체에 소속된 함수)</h2>
+
+    <script>
+      family.showAll = function(){
+        for(var key in this) {
+          document.write(key+' : '+this[key]+"<br>"+"<br>")
+        }
+      }
+      family.showAll(); //showAll 마저도 객체에 포함되기 때문에 화면에 표시됨//
+    </script>
+
+  </body>
+</html>

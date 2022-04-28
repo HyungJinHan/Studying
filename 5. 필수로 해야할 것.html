@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="color.js"></script>
+    <title>연습장</title>
+    <link rel="stylesheet" href="연습장용.css?after">
+  </head>
+  <body>
+    <input id=day_night type="button" value="야간 모드" onclick="
+    day_nightHandler(this);
+    ">
+    <br><br>
+    <input id=생활코딩 type="button" value="생활코딩 바로가기" onclick="window.open('https://opentutorials.org/course/1');
+    ">
+    <h1><a href="index.html" title="메인으로 이동">필수로 해야할 것</a></h1>
+    <!--<input id="day_night" type="button" value="야간 모드" onclick="
+      if (document.querySelector('#day_night').value === '야간 모드'){
+        document.querySelector('body').style.backgroundColor = '#424242';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#day_night').value = '주간 모드';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#day_night').value = '야간 모드';
+      }
+    ">-->
+    <ol>
+      <h2><li><u><a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=ko" target="_blank">Web Server For Chrome</a></u> 설치</li></h2>
+      <h2><li><u><a href="https://atom.io/" target="_blank">Atom</a></u> 설치</li></h2>
+      <h2><li><u><a href="https://bitnami.com/stack/wamp/installer" target="_blank">Apache's Web Server</a></u> 설치하기 (<!--PW : hee68739601-->기본 : 127.0.0.1)</li></h2>
+        C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs → <u>파일 전부 삭제 및 내 html로 대체</u>
+      <h2><li>항상 <u><a href="https://github.com/" target="_blank">Github</a></u>에 백업하기</li></h2>
+      <h2><li><u><a href="https://jquery.com/download/" target="_blank">jQuery</a></u> 다운로드 (CDN : 공동 라이브러리의 개념)</li></h2>
+    </ol>
+
+    <!--<ul>
+      <script>
+        function two(){
+          document.write('<li>2-1</li>');
+          document.write('<li>2-2</li>');
+          document.write('<li>3</li>');
+        }
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+      </script>
+    </ul>-->
+
+  </body>
+  </html>

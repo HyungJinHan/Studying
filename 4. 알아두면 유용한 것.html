@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <title>끄적끄적 - Welcome</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="공통스타일.css?after">
+</head>
+<body>
+  <input id="day_night" type="button" value="야간 모드" onclick="
+    var target = document.querySelector('body')
+    if (this.value === '야간 모드'){
+      target.style.backgroundColor = '#424242';
+      target.style.color = 'white';
+      document.querySelector('#day_night').value = '주간 모드';
+      document.querySelector('a').style.color = 'white';
+      document.querySelector('h2').style.color = 'white';
+      document.querySelector('#grid').style.color = 'white';
+      document.querySelector('ol').style.color = 'white';
+      document.querySelector('.plan').style.color = 'white';
+      document.querySelector('.school').style.color = 'white';
+      document.querySelector('.mine').style.color = 'white';
+      document.querySelector('.memo').style.color = 'white';
+      document.querySelector('.link').style.color = 'yellow';
+      document.querySelector('.link2').style.color = 'yellow';
+      document.querySelector('.link3').style.color = 'yellow';
+      document.querySelector('.link4').style.color = 'yellow';
+      document.querySelector('.link5').style.color = 'yellow';
+      document.querySelector('.link6').style.color = 'yellow';
+      document.querySelector('.link7').style.color = 'yellow';
+      document.querySelector('.link8').style.color = 'yellow';
+      document.querySelector('.link9').style.color = 'yellow';
+      document.querySelector('.link10').style.color = 'yellow';
+      document.querySelector('.link11').style.color = 'yellow';
+      document.querySelector('.link12').style.color = 'yellow';
+      document.querySelector('.link13').style.color = 'yellow';
+      document.querySelector('.link14').style.color = 'yellow';
+      document.querySelector('.link15').style.color = 'yellow';
+      document.querySelector('.active').style.color = '#2E2E2E';
+      document.querySelector('.active').style.backgroundColor = 'white';
+      document.querySelector('.active').style.paddingLeft = '5px';
+      document.querySelector('.active').style.paddingRight = '5px';
+      document.querySelector('#disqus_thread').style.backgroundColor = '#D8D8D8';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      document.querySelector('#day_night').value = '야간 모드';
+      document.querySelector('a').style.color = 'black';
+      document.querySelector('h2').style.color = 'black';
+      document.querySelector('#grid').style.color = 'black';
+      document.querySelector('ol').style.color = 'black';
+      document.querySelector('.plan').style.color = 'black';
+      document.querySelector('.school').style.color = 'black';
+      document.querySelector('.mine').style.color = 'black';
+      document.querySelector('.memo').style.color = 'black';
+      document.querySelector('.link').style.color = '#FF4000';
+      document.querySelector('.link2').style.color = '#FF4000';
+      document.querySelector('.link3').style.color = '#FF4000';
+      document.querySelector('.link4').style.color = '#FF4000';
+      document.querySelector('.link5').style.color = '#FF4000';
+      document.querySelector('.link6').style.color = '#FF4000';
+      document.querySelector('.link7').style.color = '#FF4000';
+      document.querySelector('.link8').style.color = '#FF4000';
+      document.querySelector('.link9').style.color = '#FF4000';
+      document.querySelector('.link10').style.color = '#FF4000';
+      document.querySelector('.link11').style.color = '#FF4000';
+      document.querySelector('.link12').style.color = '#FF4000';
+      document.querySelector('.link13').style.color = '#FF4000';
+      document.querySelector('.link14').style.color = '#FF4000';
+      document.querySelector('.link15').style.color = '#FF4000';
+      document.querySelector('.active').style.color = 'white';
+      document.querySelector('.active').style.backgroundColor = '#424242';
+      document.querySelector('.active').style.paddingLeft = '5px';
+      document.querySelector('.active').style.paddingRight = '5px';
+      document.querySelector('#disqus_thread').style.backgroundColor = 'white';
+    }
+    ">
+  <h1><a href="index.html" title="메인으로 이동">끄적끄적</a></h1>
+    <div id="grid">
+      <ol>
+        <h2><b><li><a href="1. 우선적인 계획.html" class="plan">우선적인 계획</a></li><br>
+        <li><a href="2. 나만의 커리큘럼.html" class="mine">나만의 커리큘럼</a></li><br>
+        <li><a href="3. 학원 커리큘럼.html" class="school">학원 커리큘럼</a></li><br>
+        <li><a href="4. 알아두면 유용한 것.html" class="active">알아두면 유용한 것</a></li><br>
+        <li><a href="https://opentutorials.org/course/1" target="_blank" title="생활코딩 사이트로 이동" class="link">
+        생활코딩 보러가기</a></b></li></h2>
+      </ol>
+        <div>
+            <div id="pic">
+              <div id="pic">
+                <br><img src="준비물.jpg" width="50%">
+              </div>
+            </div>
+          <p>1) <b><a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=ko" target="_blank" class="link2">Web Server For Chrome</a></b> 설치<br><br>
+          2) <b><a href="https://atom.io/" target="_blank" class="link3">Atom</a></b> 설치<br><br>
+          3) <b><a href="https://bitnami.com/stack/wamp/installer" target="_blank" class="link4">Apache's Web Server</a></b> 설치하기 (<!--PW : hee68739601-->기본 : 127.0.0.1) <br><br>
+          &nbsp;&nbsp;- C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs에 있는 <b><u>파일 전부 삭제 및 내 html로 대체</u></b><br><br>
+          4) 항상 <b><a href="https://github.com/" target="_blank" class="link5">Github</a></b>에 백업하기<br><br>
+          5) <b><a href="https://jquery.com/download/" target="_blank" class="link15">jQuery</a></b> 다운로드 <b>(CDN : 공동 라이브러리의 개념)</b><br><br>
+          6) 기타 유용한 사이트들<br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://www.w3schools.com/" target="_blank" class="link6">W3schools</a></b><br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://unsplash.com/" target="_blank" class="link7">무료 이미지</a></b><br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://www.inflearn.com/" target="_blank" class="link8">인프런 강의</a> ← 일단은 무료부터 수강</b><!--(구글 이메일 로그인)--><br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://poiemaweb.com/" target="_blank" class="link9">프론트엔드 관련</a></b><br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://nomadcoders.co/" target="_blank" class="link10">노마드코더 강의</a></b><br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://www.tawk.to/" target="_blank" class="link11">Tawk</a> ← 채팅 코드</b><!--(ID : han1210_36@naver.com / PW : =Hee68739601)--><br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://blog.disqus.com/" target="_blank" class="link12">Disqus</a> ← 댓글 코드</b><!--(구글 이메일 로그인)--><br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://caniuse.com/" target="_blank" class="link13">Caniuse</a> ← 해당 코드 호환성 체크</b><br><br>
+          &nbsp;&nbsp;&nbsp;
+          <b><a href="https://html-color-codes.info/Korean/" target="_blank" class="link14">HTML Color Codes</a> ← 색상 코드 사이트</b>
+        </div>
+      </div>
+    <p><div id="disqus_thread"></div>
+      <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ggujeok.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6266c7537b967b11798c6bfe/1g1gnl7vu';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  </body>
+  </html>

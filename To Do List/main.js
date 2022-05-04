@@ -12,6 +12,7 @@ let toDos = [];
 function saveList(){
     localStorage.setItem(list_LS, JSON.stringify(toDos));
 }
+
 // 웹에 입력한 리스트를 보여주기 위함
 // document.createElement() : 괄호 안에 있는 요소 생성
 // span : 문장 단위로 영역 지정 (줄 바꿈이 일어나지 않음), div : 문단 단위로 영역을 지정 (줄 바꿈이 일어남)
@@ -21,7 +22,7 @@ function showingList(text){
     const span = document.createElement("span");
     const listNum = toDos.length+1;
   // 리스트를 지울 수 있는 삭제 버튼 생성
-  delbtn.innerText = "(지우기)";
+  delbtn.innerText = "Done👍";
   delbtn.addEventListener("click", deleteList);
   span.innerText = text;
   // appendChild : 선택한 요소 안에 자식 요소를 추가
@@ -36,14 +37,6 @@ function showingList(text){
   toDos.push(toDoObj);
   // 입력된 리스트를 저장
   saveList();
-}
-
-function validateForm() {
-  let x = document.forms["#listForm"]["ftodo"].value;
-  if (x == "") {
-    alert("내용을 입력해주세요.");
-    return false;
-  }
 }
 
 //function addList(){

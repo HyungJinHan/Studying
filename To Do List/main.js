@@ -53,6 +53,8 @@ function deleteList(event){
     const btn = event.target;
     const li = btn.parentNode;
     list.removeChild(li);
+    // const done = confirm("할 일을 끝냈나요?"); - 메세지 박스
+    // console.log(done); - 메세지 박스
   // filter() : 주어진 함수를 통과하는 모든 요소를 모아 재배열
   const cleanList = toDos.filter(function(toDo){
     // parseInt() : 문자열 인자의 구문을 분석해 특정 진수의 정수를 반환

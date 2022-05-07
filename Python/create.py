@@ -8,21 +8,9 @@ form = cgi.FieldStorage()
 if "id" in form: #form안에 id 값이 있는 경우 else에 해당하는 값을 도출
     pageId = form["id"].value
     description = open("Data/"+pageId, "r").read()
-    update_link = '<a href="update.py?id={}">update</a>'.format(pageId)
-    # pageId에 따라 update 버튼을 생성
-    delete_action = '''
-        <form action="process_delete.py" method="post">
-            <input type="hidden" name="pageId" value="{}">
-            <input type="submit" value="delete">
-        </form>
-    '''.format(pageId)
-
 else:
     pageId = "Welcome"
     description = "Hello, Web"
-    update_link = ""
-    delete_action = ""
-    # pageId 값이 없는 경우 공백으로 지정해서 update 버튼 없애기
 
 files = os.listdir("Data") #files라는 함수로 묶어서 Data 폴더에 있는 파일을 불러온다
 
@@ -50,10 +38,14 @@ print('''<!doctype html>
     {listStr} <!-- 위에서 만든 파일 불러오기 포맷팅을 이식 -->
   </ol>
   <a href="create.py">Create</a>
-  {update_link}
-  {delete_action}
-  <h2>{title}</h2>
-  <p>{desc}</p>
+  <form action="process_create.py" method="post">
+  <!-- 전송할 파일을 action 태그로 지정, method를 post로 지정해서 함부로 수정할 수 없도록 하기 -->
+      <p><input type="text" name="Title" placeholder="Title"></p> <!-- 제목 생성을 위한 input 태그 -->
+      <p><textarea rows="5" name="Description" placeholder="Description"></textarea></p> <!-- 여러줄의 내용 입력을 위한 textbox -->
+      <p><input type="submit"></p> <!--  제출 버튼 -->
+  </form> <!-- 제목과 내용을 제출하기 위해 form으로 감싸기 -->
 </body>
 </html>
-'''.format(title=pageId, desc=description, listStr=listStr, update_link=update_link, delete_action=delete_action))
+'''.format(title=pageId, desc=description, listStr=listStr))
+
+# ?id=xxx -> 쿼리스트링

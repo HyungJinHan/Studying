@@ -2,12 +2,16 @@
 print("content-type: text/html; charset=utf-8\n")
 # ↑ Python을 연동시켜서 화면에 도출될 수 있게 하는 코드 ↑ (1~2)
 
+print("---------String---------")
+
 #String
 print("Hello World\n") #\n은 줄바꿈표시
 print('Hello World\n')
 print("Hell'o' World\n")
 #여기서 \는 escape (바로 뒤에오는 것을 문자취급해줌)
 print("Hell'o' \"W\"orld")
+
+print("---------Newline \.n---------")
 
 #Newline (\n)
 print('H')
@@ -16,6 +20,8 @@ print('l')
 print('l')
 print('o')
 print('H\ne\nl\nl\no')
+
+print("---------Docstring (한번에 모두 줄바꿈)---------")
 
 #Docstring (한번에 모두 줄바꿈)
 print('''
@@ -26,20 +32,30 @@ l
 o
 ''')
 
+print("---------String Operation---------")
+
 #String Operation
 a ='Hello Python'
 print(a)
 
+print("---------String Length---------")
+
 #String Length
 print(len(a))
+
+print("---------String Slice---------")
 
 #String Slice
 print(a[0]) #단순히 순서대로 하나만
 print(a[0:4]) #0~4까지의 문자 추출
 print(a[0] + a[1] + a[3] + a[7] + a[11]) #하나씩 더해서 문자 도출
 
+print("---------Repeat (반복문)---------")
+
 #Repeat
 print((a+'\n')*2) #문장과 줄바꿈을 한꺼번에 2번 반복
+
+print("---------변수 & 여러줄 주석---------")
 
 #변수 & 여러줄 주석
 '''
@@ -48,35 +64,51 @@ age = '17'
 print('To '+name+'. Lorem ipsum dolor sit amet, consectetur '+age+' adipisicing elit,sed '+name+' do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate '+name+' velit esse '+name+' cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit '+name+' anim id est laborum.')
 '''
 
+print("---------Positional Formatting (순서대로 치환하기)---------")
+
 #Positional Formatting (순서대로 치환하기)
 '''
 print('To {}. Lorem ipsum dolor sit amet, consectetur {} adipisicing elit,sed {} do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate {} velit esse {} cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit {} anim id est laborum.'.format('Father, Mother', 17, 'Father, Mother', 'Father, Mother', 'Father, Mother', 'Father, Mother'))
 '''
 
+print("---------Named Placeholders (지정하여 치환하기)---------")
+
 #Named Placeholders (지정하여 치환하기)
 #예를 들어 age의 값에 무조건 숫자를 넣어야 한다면 {age:d(digit)}으로 입 (d는 digit의 약자)
 print('To {name}. Lorem ipsum dolor sit amet, consectetur {age:d} adipisicing elit,sed {name} do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate {name} velit esse {name} cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit {name} anim id est laborum.'.format(name='Father, Mother', age=17))
+
+print("---------Boolean (참과 거짓으로 이루어진 값)---------")
 
 #Boolean (참과 거짓으로 이루어진 값)
 print(True)
 print(False)
 
+print("---------Expression (표현식)---------")
+
 #Expression (표현식)
 print(1+1) #2 도출
 print("Hello "+"World") #Hello World 도출
+
+print("---------Comparison Operator (비교 연산자)---------")
 
 #Comparison Operator (비교 연산자)
 print(1==1) #True
 print(1<1) #False
 print(1<3) #True
 
+print("---------포함된 텍스트 찾기---------")
+
 #포함된 텍스트 찾기
 print("world" in "Hello World") #False
 print("Hello" in "Hello World") #True
 
-#포함된 파일 찾기 (Cmd상에서는 왜 안되는지 모름)
+print("---------포함된 파일 찾기 (cmd상에서는 왜 안되는지 모름)---------")
+
+#포함된 파일 찾기 (cmd상에서는 왜 안되는지 모름)
 import os.path
 print(os.path.exists("String.py"))
+
+print("---------Conditional (조건문)---------")
 
 #Conditional (조건문)
 # if xxx : # → 반드시 True/False인 Boolean 값이 와야함
@@ -100,7 +132,7 @@ else :
     print("Get Out!")
 '''
 
-print("-------------------")
+print("---------Logical Operator (논리 연산자)---------")
 
 #Logical Operator (논리 연산자)
 user_ID = input("ID?")
@@ -114,7 +146,7 @@ elif user_ID == "jhs" and user_PW == "7304": #조건을 추가하려면 else + i
 else:
     print("Get Out!")
 
-print("-------------------")
+print("---------List (일종의 수납장)---------")
 
 #List (일종의 수납장)
 List = [1, "four", 9, 16, 25, 30] # → []안의 것들을 원소(element)라고 부름
@@ -138,20 +170,39 @@ print(List)
 
 print("hhj".capitalize()) #앞글자 대문자로 변환
 
-print("-------------------")
+print("---------Dictionary (dic)---------")
 
 #Dictionary (dic)
 family = {"father" : "hsh", "mother" : "jhs", "son1" : "hhj", "son2" : "hhj2"}
 print(family["father"])
 
-print("-------------------")
+print("---------Loop (반복)---------")
 
 #Loop (반복문)
 for hhj in ["a", "b", "c"]: #element인 a,b,c를 hhj 값으로 입력
     print(hhj)
 
-print("-------------------")
-
 #range의 수 만큼 반복
 for jhs in range(5):
     print(jhs)
+
+print("---------함수---------")
+
+# Function (average)
+a=1
+b=2
+c=3
+d=4
+s=a+b+c+d
+r=s/4
+print(r)
+
+def average():
+    a=1
+    b=7
+    c=3
+    d=4
+    s=a+b+c+d
+    r=s/4
+    print(r)
+average()

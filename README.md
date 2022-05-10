@@ -5,4 +5,4 @@
 - $_GET을 통한 php의 id 불러오기
 - if, else를 통한 조건문 형식의 제목, 내용 불러오기 지정
 - if의 true, false 값을 isset을 통해 불러온 id의 유무에 따른 조건문 완성
-- [생활코딩 PHP] (https://opentutorials.org/course/3130)
+- [생활코딩 PHP](https://opentutorials.org/course/3130)

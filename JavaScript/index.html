@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css?after">
+    <title>JavaScript's Syntax</title>
+  </head>
+  <body>
+    <h1>JavaScript's Syntax</h1>
+    This is JavaScript Test File.<br>
+    document.write - 웹 페이지 상으로 출력
+    <script>
+      console.log("Hello World");
+      // 개발자 도구 or 콘솔 상에 Hello World라고 출력
+    </script>
+      <h2>--------------- 수의 연산 ---------------</h2>
+    <script>
+      document.write(Math.pow(3, 2),
+      " → 3의 2제곱 (Math.pow)", "<br>");
+      // pow : 제곱
+      document.write(Math.round(11.5),
+      " → 11.5의 반올림 (Math.round)", "<br>");
+      // round : 반올림
+      document.write(Math.floor(11.6),
+      " → 11.6의 버림 (Math.floor)", "<br>");
+      // floor : 버림
+      document.write(Math.ceil(11.2),
+      " → 11.2의 올림 (Math.ceil)", "<br>");
+      // ceil : 올림
+      document.write(Math.sqrt(121),
+      " → 121의 제곱근 (Math.sqrt)", "<br>");
+      // sqrt : 제곱근
+      document.write(100*Math.random(),
+      " → 랜덤 수 x 100 (Math.random)", "<br>");
+      // random : 랜덤
+      document.write(Math.round(100*Math.random()),
+      " → 랜덤 수 x 100을 반올림 (Math.round(100*Math.random())");
+      // round(random) : 랜덤 값을 반올림
+    </script>
+      <h2>--------------- 문자의 표현 & 명령 ---------------</h2>
+    <script>
+      document.write("\"\"\'\'\(\)",
+      " → &#92;&quot;, &#92;&apos; 이렇게 사용하면 &#92;뒤에 오는 것은 문법이 아닌 문자로 출력<br>");
+      // 문법에 사용되는 문자를 온전히 출력하려면 Entities 검색
+      document.write("2, ", 2,
+      " → &quot;2&quot;는 문자(string)취급, 2는 숫자(number)취급", "<br>");
+      // "2"은 문자, 2는 숫자
+      document.write("안녕하세요."+" "+"여러분",
+      " → &#34;안녕하세요.&#34;&#43;&#34;&#34;공백&#34;&#34;&#43;&#34;여러분&#34; (문장 합치기)", "<br>");
+      // \n : 줄바꿈
+      document.write("Hello World".length,
+      " → Hello World의 문자 수 (\"Hello World\".length)", "<br>");
+      // length : 해당 문장의 문자 수
+      document.write("Hello World".indexOf("d"), " / ", "Hello World".indexOf("or"),
+      " → Hello World에서 d, or의 위치 출력 (\"Hello World\".indexOf(\"d,or\"))");
+      // indexOf : 해당 문장의 문자 위치
+    </script>
+      <h2>--------------- 변수 (Variable) ---------------</h2>
+    <script>
+      var a = 100; // 변동 가능한 값 - 변수
+      document.write(a = a+10, " / "); // 현재 a는 110 (100+10)
+      document.write(a = a/10, " / "); // 현재 a는 11 (110/10)
+      document.write(a = a-10, " / "); // 현재 a는 1 (11-10)
+      document.write(a = a*10, " / "); // 현재 a는 10 (1*10)
+      document.write(a+100,
+      " → 변수 a(100)에 대해서 연산하며 내려간 값의 결과", "<br>");
+      const HW = "Hello World", hhj = "I'm Jin"
+      // Hello World를 대신할 HW라는 변수 지정 (var도 사용 가능)
+      document.write(HW+"! "+hhj,
+      " → HW(Hello World)와 hhj(I'm Jin)를 합침", "<br>")
+      // 둘 이상의 변수를 같이 사용해서 표현 가능
+    </script>
+  </body>
+</html>

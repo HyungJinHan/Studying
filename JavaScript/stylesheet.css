@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body{
+  color: white;
+  font-family: 'Jua', sans-serif;
+  background-color: #424242;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 40px;
+}

@@ -35,10 +35,10 @@ body{
 }
 
 .contents li{
-  width: 70%;
+  width: 80%;
   font-size: 25px;
-  margin-left: 70px;
-  margin-top: 30px;
+  margin-left: 30px;
+  margin-top: 40px;
   margin-bottom: 30px;
   border-bottom: solid 3px #FFFFFF;
   letter-spacing: 1px;
@@ -62,9 +62,10 @@ input{
   /* font-family: 'Yeon Sung', cursive; */
   font-family: 'Jua', sans-serif;
   font-weight: 100;
-  font-size: 20px;
-  width: 500px;
-  height: 30px;
+  font-size: 25px;
+  margin-top: 20px;
+  width: 550px;
+  height: 40px;
   border-radius: 0.3em;
   border-color: #2E2E2E;
   border: 3px;
@@ -75,7 +76,7 @@ button{
   font-family: 'Jua', sans-serif;
   color: #424242;
   position: absolute;
-  right: 40px;
+  right: 25px;
   font-size: 20px;
   text-align: center;
   background-color: #fff;
@@ -90,7 +91,7 @@ button:hover{
   font-family: 'Jua', sans-serif;
   color: white;
   position: absolute;
-  right: 40px;
+  right: 25px;
   text-align: center;
   background-color: #424242;
   border-color: white;

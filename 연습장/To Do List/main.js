@@ -51,10 +51,18 @@ function showingList(text){
 // 삭제버튼을 누르면 해당되는 리스트를 지우는 함수
 function deleteList(event){
     const btn = event.target;
+      const done = confirm("Are You Done?");
+        if(done == true){
+          alert("Congratulation!");
+        } else {
+          alert("Keep Going!");
+          return;
+        }
+        // event.target으로 권한이 부여된 부분에 done이라는 이름의 confirm를
+        // const를 이용하여 변수로 지정, 확인을 눌러 true 값이 되면 Congratulation!
+        // 취소를 눌러 false 값이 되면 Keep Going!과 함께 return으로 삭제 취소
     const li = btn.parentNode;
     list.removeChild(li);
-    // const done = confirm("할 일을 끝냈나요?"); - 메세지 박스
-    // console.log(done); - 메세지 박스
   // filter() : 주어진 함수를 통과하는 모든 요소를 모아 재배열
   const cleanList = toDos.filter(function(toDo){
     // parseInt() : 문자열 인자의 구문을 분석해 특정 진수의 정수를 반환

@@ -6,14 +6,29 @@
     <title>JavaScript's Syntax</title>
   </head>
   <body>
+    <input type="button" class="goupbtn" value="👆" onclick="clickme1()">
+    </div>
+    <input type="button" class="godwbtn" value="👇" onclick="clickme2()">
+    </div>
+    <script>
+      function clickme1() {
+        window.scrollTo(0,0);
+      }
+      function clickme2() {
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    </script>
     <h1>JavaScript's Syntax</h1>
     This is JavaScript Test File.<br>
-    document.write - 웹 페이지 상으로 출력
+    document.write - 웹 페이지 상으로 출력<br>
+    Boolean(참, 거짓) : true / false 값<br>
+    Number(숫자) : 1, 2, 3...<br>
+    String(문자) : "a", "b", "c", "1", "2", "3"
     <script>
-      console.log("Hello World");
+      console.log("Hello, This is my JavaScript's Syntax practice WEB");
       // 개발자 도구 or 콘솔 상에 Hello World라고 출력
     </script>
-      <h2>--------------- 수의 연산 ---------------</h2>
+      <h2>----- 수의 연산 -----</h2>
     <script>
       document.write(Math.pow(3, 2),
       " → 3의 2제곱 (Math.pow)", "<br>");
@@ -37,7 +52,7 @@
       " → 랜덤 수 x 100을 반올림 (Math.round(100*Math.random())");
       // round(random) : 랜덤 값을 반올림
     </script>
-      <h2>--------------- 문자의 표현 & 명령 ---------------</h2>
+      <h2>----- 문자의 표현 & 명령 -----</h2>
     <script>
       document.write("\"\"\'\'\(\)",
       " → &#92;&quot;, &#92;&apos; 이렇게 사용하면 &#92;뒤에 오는 것은 문법이 아닌 문자로 출력<br>");
@@ -55,7 +70,7 @@
       " → Hello World에서 d, or의 위치 출력 (\"Hello World\".indexOf(\"d,or\"))");
       // indexOf : 해당 문장의 문자 위치
     </script>
-      <h2>--------------- 변수 (Variable) ---------------</h2>
+      <h2>----- 변수 (Variable) -----</h2>
     <script>
       var a = 100; // 변동 가능한 값 - 변수
       document.write(a = a+10, " / "); // 현재 a는 110 (100+10)
@@ -70,5 +85,220 @@
       " → HW(Hello World)와 hhj(I'm Jin)를 합침", "<br>")
       // 둘 이상의 변수를 같이 사용해서 표현 가능
     </script>
+      <h2>----- 비교 연산자 (Comparison Operator) -----</h2>
+    <script>
+      document.write("a = 1",
+      " → = (대입연산자) : 대신하는 역할", "<br>");
+      document.write(1==1, " / ", 2==1,
+      " → == (동등연산자) : 비교하는 역할, 1==1은 true, 2==1은 false", "<br>");
+      document.write("one"=="one", " / ", "one"=="two",
+      " → == : \"one\"==\"one\" true, \"one\"==\"two\"은 false", "<br>");
+      document.write(1==="1", " / ", 1===1,
+      " → === (일치연산자) : 정확히 일치해야 함 1===\"1\" false, 1===1은 true", "<br>");
+      document.write(null==undefined, " / ", null===undefined,
+      " → null==undefined은 true, null===undefined은 false", "<br>");
+      // null : 값이 없음 / undefined : 값이 정의되지 않음 (아주 같은 것은 아님)
+      document.write(1!=1, " / ", 2!=1,
+      " → != (부정) : 1!=1은 false, 2!=1은 true", "<br>");
+      document.write(1>1, " / ", 2>1,
+      " → >, < (비교) : 1>1은 false, 2>1은 true", "<br>");
+      document.write(1>=1, " / ", 10>=11,
+      " → >=, <= (비교) : 1>=1은 true, 10>=11은 false", "<br>");
+    </script>
+      <h2>----- 조건문 (Conditional Statement) -----</h2>
+    <script>
+      if(true) {
+        document.write("You Choose True", " / ")
+        document.write("If You Choose False, I Will Disappear")
+      } else {
+        document.write("You Choose False")
+      };
+      document.write("<br>", " → if()에 true 값이 올 경우 if {}에 입력된 값이 출력");
+
+      document.write("<br>");
+
+      if(false) {
+        document.write("You Choose True")
+      } else {
+        document.write("You Choose False", " / ")
+        document.write("If You Choose True, I Will Disappear")
+      };
+      document.write("<br>", " → if()에 false 값이 올 경우 else {}에 입력된 값이 출력");
+
+      document.write("<br>");
+
+      if(false) {
+        document.write("You can't pass. → (1 true)")
+      } else if(false) {
+        document.write("You did 1 pass. → (1 false, 1 true)")
+      } else if(true) {
+        document.write("You did 2 pass. → (2 false, 1 true)")
+      } else {
+        document.write("You did all pass. → (3 false)")
+      };
+    </script>
+      <h2>----- 변수 & 비교 연산자 -----</h2>
+    <script>
+      const ifex = "1"; // const : 중복 입력을 방지하기 위한 변수
+      if(ifex == 1) {
+        document.write("ifex is 1 or \"1\"",
+        " → 변수 ifex = \"1\", if(ifex == 1)의 결과로 true")
+      } else {
+        document.write("ifex is just \"1\", not 1",
+        " → 변수 ifex = \"1\", if(ifex === 1)의 결과로 false")
+      };
+
+      document.write("<br>");
+
+      if(ifex === 1) {
+        document.write("ifex is 1 or \"1\"",
+        " → 변수 ifex = \"1\", if(ifex == 1)의 결과로 true")
+      } else {
+        document.write("ifex is just \"1\", not 1",
+        " → 변수 ifex = \"1\", if(ifex === 1)의 결과로 false")
+      };
+      /*
+       document.write("<br>");
+
+       var id = prompt("What's Your ID?");
+       if(id == "hhj"){
+         var pw = prompt("What's Your Password?");
+         if(pw == "hhj"){
+           alert("Welcome Master!")
+         } else {
+           alert("You Are Wrong Password")
+         }
+       } else {
+        alert("You Are Wrong ID")
+       };
+       */
+    </script>
+      <!-- <h2>----- 논리 연산자 (And : && / or : ||) -----</h2> -->
+    <script>
+      /*
+       var id = prompt("What's Your ID? (And : && - 논리연산자)");
+       var pw = prompt("What's Your Password? (And : && - 논리연산자)");
+       if(id == "hhj" && pw == "hhj") {
+         alert("You did \"true && true\""); // 둘 다 맞음
+       } else if(id != "hhj" && pw == "hhj") {
+         alert("You did \"false && true\""); // id가 틀림
+       } else if(id == "hhj" && pw != "hhj") {
+         alert("You did \"true && false\""); // pw가 틀림
+       } else if(id != "hhj" && pw != "hhj") {
+         alert("You did \"false && false\"") // 둘 다 틀림
+       };
+
+       var fam = prompt("What's Your Name (or : || - 논리연산자)")
+       if(fam === "hsh" || fam === "jhs" || fam === "hhj1"|| fam === "hhj2") {
+         alert("You Are My Family"); // 4개의 값 중 or로써 1개라도 맞음
+       } else {
+         alert("You Are Not My Family"); // 4개의 값 중 or로써 다 틀림
+       };
+
+       var fam_id = prompt("What's Your Name (or + And : || + && - 논리연산자)")
+       var fam_pw = prompt("What's Your Password (or + And : || + && - 논리연산자)")
+       if((fam_id === "hsh" || fam_id === "jhs" || fam_id === "hhj1"|| fam_id === "hhj2")
+         && fam_pw === "68739601") {
+         alert("You Are My Family"); // 4개의 값 중 or로써 1개라도 맞고 비번 맞음
+       } else {
+         alert("You Are Not My Family"); // id나 비번 둘 중 하나 틀림
+       };
+      */
+      </script>
+        <h2>----- not 연산자 (!true / !false) -----</h2>
+      <script>
+        document.write("true나 false 앞에 !가 있다면 반대의 결과 도출", "<br>",
+        " → 예시 : !true = false / !false = true");
+      </script>
+        <h2>----- Boolean(true, false)의 대체제 -----</h2>
+      <script>
+        document.write(true==1, " / ", true=="1", " / ", true==2,
+        " → JavaScript에서 true는 1과 같음 (==)", "<br>");
+        document.write(false==0, " / ", false=="2",
+        " → JavaScript에서 false는 0과 같음 (==)", "<br>");
+        document.write("↓ 그 외의 false의 값의 대체제 ↓", "<br>",
+        "빈문자열, undefined, 할당되지 않은 변수, null, NaN");
+      </script>
+        <h2>----- 반복문 (Loop / Iterate) -----</h2>
+      <script>
+        document.write("-----while-----", "<br>")
+        var w = 0;
+        while(w < 5) {
+          w = w + 1
+          document.write("Hello while "+ w +"<br>")
+        };
+        document.write("1) w이라는 변수를 0으로 지정", "<br>",
+        "2) while()의 값에 w이 5보다 작을때 (w < 5) 반복문 종료 지정", "<br>",
+        "3) w이 1씩 더해지는 사항을 w로 지정", "<br>")
+
+        document.write("-----for-----", "<br>")
+        for(var f = 0; f < 5; f = f + 1) {
+          document.write("Hello for "+ (f+1) +"<br>")
+        };
+        document.write("while이랑 다르게 for()의 값에 (변수; 반복수; 반복실행 조건)을 전부 입력함", "<br>",
+        "f = f + 1을 ++f(0부터 시작해서 1씩 더함), f++(1부터 시작해서 1씩 더함)으로 대체 가능", "<br>")
+      </script>
+        <h2>----- 반복문 제어 -----</h2>
+      <script>
+        document.write("-----break-----", "<br>")
+        for(var f1 = 0; f1 < 10; f1++) {
+          if(f1 === 7) {
+            break;
+          }
+            document.write("Hello for, break "+ (f1+1) +"<br>")
+        };
+        document.write("if문을 사용하여 한도를 정한 뒤 break 지정", "<br>");
+
+        document.write("-----continue-----", "<br>")
+        for(var f2 = 0; f2 < 10; f2++) {
+          if(f2 === 7) {
+            continue;
+          }
+            document.write("Hello for, continue "+ (f2+1) +"<br>")
+        };
+        document.write("if문을 사용하여 지정한 값의 다음 값만 지우고 계속해서 반복 실행");
+        </script>
+          <h2>----- 반복문 중첩 -----</h2>
+        <script>
+          for(var ff = 0; ff < 3; ff++) {
+            for(var j = 0; j < 3; j++) {
+              document.write("Hello for "+ff+(j+1)+"<br>")
+              // ff는 0부터 시작하는 앞자리, j+1은 1부터 시작하는 뒷자리
+            }
+          };
+          document.write("반복문 내에 반복문을 중첩할 수 있음", "<br>",
+          "(\"Hello for \"+ff+(j+1)+\"&lt;br&gt;\")의 경우<br> 문자와 문자 사이에 있는 +ff+(j+1)+ 라는 숫자는 자동으로 문자화 시켜줌");
+      </script>
+        <h2>----- 함수 (Function) -----</h2>
+      <script>
+        function example() {
+          document.write("function example()을 이용해 example 안에 출력할 값을 지정")
+          document.write("<br>", "함수 출력은 example();으로 하며 다수의 값 지정 가능")
+          document.write("<br>", "변수와 비슷하다고 볼 수 있으며, 어디서든 재사용 가능")
+        }
+        example(); // 함수의 경우 함수로 정한 값 뒤에 ()를 넣어야 함
+
+        document.write("<br>", "-----return-----")
+        function get_family1() {
+          return "<br>get_family1를 함수로 지정 후";
+        }
+        function get_family2() {
+          return "<br>return 값에 출력할 값을 지정,";
+        }
+        function get_family3() {
+          return "<br>document.write()로 값을 출력";
+        }
+        document.write(get_family1());
+        document.write(get_family2());
+        document.write(get_family3());
+
+        function example2() {
+          return "<br>return은 상단의 하나의 출력값만을 표시";
+          return "<br>어차피 안나올거잖아 1";
+          return "<br>어차피 안나올거잖아 2";
+          return "<br>어차피 안나올거잖아 3";
+        }
+        document.write(example2());
+      </script>
   </body>
 </html>

@@ -23,7 +23,8 @@
     document.write - 웹 페이지 상으로 출력<br>
     Boolean(참, 거짓) : true / false 값<br>
     Number(숫자) : 1, 2, 3...<br>
-    String(문자) : "a", "b", "c", "1", "2", "3"
+    String(문자) : "a", "b", "c", "1", "2", "3"<br>
+    대문자 변환 : xxx(입력할 값).toUpperCase
     <script>
       console.log("Hello, This is my JavaScript's Syntax practice WEB");
       // 개발자 도구 or 콘솔 상에 Hello World라고 출력
@@ -267,7 +268,7 @@
             }
           };
           document.write("반복문 내에 반복문을 중첩할 수 있음", "<br>",
-          "(\"Hello for \"+ff+(j+1)+\"&lt;br&gt;\")의 경우<br> 문자와 문자 사이에 있는 +ff+(j+1)+ 라는 숫자는 자동으로 문자화 시켜줌");
+          "(\"Hello for \"+ff+(j+1)+\"&lt;br&gt;\")의 경우,<br> 문자와 문자 사이에 있는 +ff+(j+1)+ 라는 숫자는 자동으로 문자화 시켜줌");
       </script>
         <h2>----- 함수 (Function) -----</h2>
       <script>
@@ -278,7 +279,7 @@
         }
         example(); // 함수의 경우 함수로 정한 값 뒤에 ()를 넣어야 함
 
-        document.write("<br>", "-----return-----")
+        document.write("<br>", "-----return (출력)-----")
         function get_family1() {
           return "<br>get_family1를 함수로 지정 후";
         }
@@ -299,6 +300,102 @@
           return "<br>어차피 안나올거잖아 3";
         }
         document.write(example2());
+
+        document.write("<br>", "-----Input (입력)-----")
+        function get_arguments(arg1, arg2) {
+          return arg1;
+        }
+        document.write(get_arguments("<br> argument는 인자, parameter는 매개변수 <br>"));
+        document.write(get_arguments("1) function get_argument(arg)<br>"));
+        document.write(get_arguments("2) {return arg;<br>"));
+        document.write(get_arguments("3) document.write(get_argument(이거슨 예시))};<br>"));
+        document.write(get_arguments("4) 결과 : 이거슨 예시<br>"));
+        document.write(get_arguments("function get_arguments(arg1, arg2) 사용으로<br>"));
+        document.write(get_arguments("인자를 복수로 지정 가능<br>"));
+      </script>
+      <script>
+        function get_arguments(arg1, arg2) {
+          return arg1 * arg2;
+        }
+        document.write("인자값을 2개 동시에 지정 후, return arg1(80) * arg2(40)을 하면")
+        document.write("<br>결과 : 3200<br>")
+        document.write(get_arguments(80, 40));
+      </script>
+      <script>
+        example3 = function() {
+          return "<br>이거슨 순서 바꾼 예시";
+        }
+        document.write(example3());
+      </script>
+        <h2>----- 배열 (Array) -----</h2>
+      <script>
+        var array_ex1 = ["대괄호에 ", "들어가는 ", "사항들은 ", "Element (원소)"];
+          document.write(array_ex1[0]);
+          document.write(array_ex1[1]);
+          document.write(array_ex1[2]);
+          document.write(array_ex1[3]+"<br>");
+        var array_ex2 = ["원소를 ", "출력할 때 ", "사용하는 숫자는 ", "Index (색인)"];
+          document.write(array_ex2[0]);
+          document.write(array_ex2[1]);
+          document.write(array_ex2[2]);
+          document.write(array_ex2[3]);
+
+        document.write("<br>", "-----배열과 반복문-----", "<br>")
+        var get_examples = ["this is ", "array and ", "loop's ", "collaboration ", "(feat.toUpperCase())"];
+        for (var ex = 0; ex < 4; ex++) {
+          document.write(get_examples[ex]);
+        }
+
+        document.write("<br>", get_examples[0].toUpperCase());
+        document.write(get_examples[1].toUpperCase());
+        document.write(get_examples[2].toUpperCase());
+        document.write(get_examples[3].toUpperCase(), "<br>");
+        document.write(get_examples[4]);
+        document.write(" ", get_examples.length, "개의 값", "<br>");
+
+        var ex_family = ["한상현", " ", "조희성", "<br>", "한형진", " ", "한형주", "<br>", "강원식", " ", "조희경", "<br>", "강지훈", " ", "강지혜", "<br>", "김도형", " ", "조희남", " ", "김예빈"];
+          for (var ex_fam = 0; ex_fam < ex_family.length; ex_fam++) {
+          // 원소의 개수를 ex_fam 반복의 한계값으로 지정
+            document.write(ex_family[ex_fam]);
+            // 결과적으로 원소의 수가 변하더라도 탄력적으로 변경됨
+          }
+          document.write("<br>", " → ex_fam의 반복의 한계값을 변수 ex_family의 개수인", "<br>", "ex_family.length로 지정하면 배열 내의", "<br>", "원소의 개수가 변하더라도 출력값이 탄력적으로 변경");
+
+          document.write("<br>", "-----배열의 제어 (push : 맨 뒤)-----", "<br>")
+          var ex_this = ["변수로 지정한 ex_this 배열에 "+".push(추가됩니다)"+"를 입력하면 "+"<br>"+"맨 뒷자리에 "+"지정한 값이 "];
+          ex_this.push("추가됩니다");
+          document.write(ex_this);
+          // push는 맨 뒷자리에 추가
+
+          document.write("<br>", "-----배열의 제어 (concat : 복수)-----", "<br>")
+          var ex_this2 = ["변수로 지정한 ex_this2 배열에 "+".concat([여러개가, 추가됩니다])"+"를<br>입력하면 "+"맨 뒷자리에 "+"지정한 값이 "];
+          ex_this2 = ex_this2.concat(["여러개가 ", "추가됩니다"]);
+          document.write(ex_this2);
+
+          document.write("<br>", "-----배열의 제어 (unshift : 맨 앞)-----", "<br>")
+          var ex_this3 = [" 변수로 지정한 ex_this3 배열에 "+"<br>"+".unshift(원소를 맨 앞에 추가하려면)"+"을 입력하면 "+"맨 앞자리에 "+"지정한 값이 추가됨"];
+          ex_this3.unshift("원소를 맨 앞에 추가하려면");
+          document.write(ex_this3);
+
+          document.write("<br>", "-----배열의 제어 (splice : 중간)-----", "<br>")
+          var ex_this4 = [" 변수로 지정한 ex_this4 배열에 ", "<br>", ".splice(원하는 자리의 번호와 입력한 원소가)", "를 입력하면 ", "<br>",  "추가됨"];
+          ex_this4.splice(5, 0, "원하는 자리의 번호와 입력한 인자가");
+          document.write(ex_this4);
+
+          document.write("<br>", "-----배열의 제어 (splice : 삭제)-----", "<br>")
+          var ex_this5 = [" 앞의 숫자는 몇번째에 들어갈지의 숫자를", "<br>", "뒤의 숫자는 들어갈 자리에 몇개의 원소를 삭제할지를 의미", "<br>", "ex_this5.splice(원하는 자리에, 삭제된 내용 대신)", "<br>", "을 (삭제될 내용) 자리에 입력하면 ", "<br>", "삭제될 내용", "으로 추가됨"];
+          ex_this5.splice(8, 1, "원하는 자리에", "삭제된 내용 대신");
+          document.write(ex_this5);
+
+          document.write("<br>", "-----배열의 제거 (shift : 맨 앞 제거)-----", "<br>")
+          var ex_this6 = ["제거할 내용", "맨 앞의 (제거할 내용)은 ", "<br>", "ex_this6.shift()", "을 입력하면 맨 앞이 제거됨"];
+          ex_this6.shift();
+          document.write(ex_this6);
+
+          document.write("<br>", "-----배열의 제거 (shift : 맨 뒤 제거)-----", "<br>")
+          var ex_this7 = ["맨 뒤의 (제거할 내용)은 ", "<br>", "ex_this7.pop()", "을 입력하면 맨 뒤이 제거됨", "제거할 내용"];
+          ex_this7.pop("");
+          document.write(ex_this7);
       </script>
   </body>
 </html>

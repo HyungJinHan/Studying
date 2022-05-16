@@ -507,15 +507,135 @@
         document.write("<br>");
         var pattern4 = /n/g; // g를 입력하면 해당 값을 모두 도출
         document.write("hanhyunjin".match(pattern4)); document.write(" → var pattern4 = /n/g;");
+        // document.write("<br>", "-----정규 표현식 (캡쳐)-----", "<br>");
+        // var wsw = /(\w+)\s(w+)/;
+        // // 여러 글자의 단어 + 여백 + 여러 글자의 단어 의미
+        // // xxx xxx이라는 문장의 형식을 말함(특수문자 X)
+        // document.write("입니다 변경전".replace(wsw, "$2, $1"));
+        //이유는 모르겠으나 순서 변경이 안됨
+        // document.write("<br>", "-----정규 표현식 (치환)-----", "<br>");
+      </script>
+        <h2>----- 유효범위 (Scope) -----</h2>
+      <script>
+        document.write("JavaScript의 지역변수는 함수에서만 유효", "<br>");
+        var vscope = "global"; // 전역변수 (문서의 전체에서 접근 가능)
+          function fscope() {
+            var vscope = "local"; // 지역변수 (함수 내에서만 한정해서 접근 가능)
+            document.write(vscope);
+          }
+          fscope(); // 함수 내부의 변수만을 출력 (결과 : local)
+        document.write("<br>", "전역변수보다는 지역변수 사용을 권장", "<br>", "충돌, 중복을 피하기 위함임");
 
-        document.write("<br>", "-----정규 표현식 (캡쳐)-----", "<br>");
-        var wsw = /(\w+)\s(w+)/;
-        // 여러 글자의 단어 + 여백 + 여러 글자의 단어 의미
-        // xxx xxx이라는 문장의 형식을 말함(특수문자 X)
-        var wsw1 = "입니다 변경전";
-        document.write(wsw1.replace(wsw, "$2, $1"));
+        document.write("<br>", "-----지역변수-----", "<br>");
+        function local_var() {
+          var i = 0;
+          // 여기서 var를 지워버리면 지역변수가 아닌 전역변수로 변경됨
+          // 결국 전역변수로써의 i = 0이 돼버리기 때문에 i를 0으로 무한으로 변경하며 에러
+        }
+        for(var i = 0; i < 10; i++) {
+          local_var();
+          document.write(i);
+        }
 
-        document.write("<br>", "-----정규 표현식 (치환)-----", "<br>");
+        document.write("<br>", "-----전역변수-----", "<br>");
+        (function (){
+          var MYAPP = {} // 전역변수 (함수에 소속되면서 지역변수로 변경)
+          MYAPP.calculator = {
+            "left" : null,
+            "right" : null
+          }
+          MYAPP.codrdinate = {
+            "left" : null,
+            "right" : null
+          }
+          MYAPP.calculator.left = 30;
+          MYAPP.calculator.right = 80;
+          function sum() {
+            return MYAPP.calculator.left + MYAPP.calculator.right;
+          }
+          document.write(sum());
+        }()); // function을 전부 ()로 묶으면 익명함수가 되고, 별도의 출력코드없이 바로 출력됨
+
+        document.write("<br>", "-----정적 유효범위-----", "<br>");
+        var not_flex = 5; // 전역변수
+        function not_flex1() {
+          var not_flex = 10; // 지역변수
+          not_flex2();
+        }
+        function not_flex2() {
+          document.write(not_flex);
+        }
+        // not_flex라는 지역변수가 없기 때문에 전역변수로써 var not_flex = 5;를 출력
+        // 바로 위의 함수 지역변수인 var not_flex = 10;는 출력되지 않음
+        not_flex1(); // 결과는 전역변수인 var not_flex = 5;의 값인 5
+      </script>
+        <h2>----- 값으로써의 함수와 콜백 -----</h2>
+      <script>
+        document.write("-----값으로써의 함수-----", "<br>");
+        document.write("function a(){}와 var a = function(){}는 같은 것", "<br>");
+        function cal (func, num) {
+          return func(num)
+        }
+        function increase(num) {
+          return num+1
+        }
+        function decrease(num) {
+          return num-1
+        }
+        document.write(cal(increase, 1), "<br>");
+        document.write(cal(decrease, 1));
+
+        function cal_2(mode) {
+          var funcs = {
+            "plus" : function(left, right) {return left + right},
+            // plus를 함수로 지정
+            "minus" : function(left, right) {return left - right}
+            // minus를 함수로 지정
+          }
+          return funcs[mode];
+          // [mode]값에 plus, minus 입력으로 함수를 호출
+        }
+        document.write("<br>", cal_2("plus")(2, 1), "<br>");
+        document.write(cal_2("minus")(2, 1), "<br>");
+
+        var process = [
+          function(input) {return input + "로 먼저 1번 process가 추가되고";},
+          // 밑에서 지정한 input 값 "이거슨 예시"가 입력
+          function(input) {return input + " 다음으로 2번 process가 추가,";},
+          // 밑의 과정을 거쳐 "이거슨 예시"와 " 다음으로 2번 process가 추가," 입력
+          function(input) {return input + "<br> 다음으로 3번 process가 출력되며 반복문 종료";}
+          // 밑의 과정을 거쳐 "이거슨 예시"와 " 다음으로 2번 process가 추가,",
+          // "<br> 다음으로 3번 process가 출력되며 반복문 종료"가 마지막으로 추가됨
+          // input_i < process.length로 인해 process의 과정이 끝남과 동시에 반복문 종료
+        ];
+        var input = "이거슨 예시";
+        for(var input_i = 0; input_i < process.length; input_i++) {
+          input = process[input_i](input);
+          // input_i는 0부터 시작해서 process의 3개의 단계가 끝날때 까지 반복이므로
+          // input_i는 0, 1, 2까지의 숫자를 갖게 됨
+          // for문에서 지정한 0, 1, 2의 값이 process[input_i]에 입력됨
+        }
+        document.write(input);
+        document.write("<br>", "-----콜백-----", "<br>");
+        var callback_num = [1, 5, 2, 3, 4, 6, 8, 7, 10, 9]
+        var sortfunc = function(a, b) {
+          // return a - b; // 뺀 값이 양수인지, 음수인지, 0인지를 판별하게 됨
+          return b - a; // 정렬을 역수로 하기 위함
+          // console.log(a, b);
+          // if (a > b) { // 만약 a가 b보다 크다면
+          //   return 1; // 1 출력
+          // } else if (a < b) { // 또한 만약에 a가 b보다 작다면
+          //   return -1; // -1 출력
+          // } else { //그렇지 않다면 (a = b)
+          //   return 0; // 0 출력 (무시)
+          // }
+        }
+        // 위의 함수를 콜백함수라고 함
+        document.write(callback_num.sort(sortfunc));
+        console.log(callback_num.sort(sortfunc));
+        // 위에서 정한 출력값으로 인해 크기를 비교해서 -1, 0, 1의 값이 출력됨
+        // -1, 0, 1을 sort하게 되는 것
+        document.write("<br>", "-----비동기 콜백-----", "<br>");
       </script>
   </body>
 </html>

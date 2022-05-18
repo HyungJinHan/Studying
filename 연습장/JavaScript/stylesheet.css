@@ -15,6 +15,14 @@ a{
   color: #F2F5A9;
 }
 
+h2{
+  border-bottom: 7px solid white;
+  width: auto;
+  display: inline-block;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
 .goupbtn{
   width: 50px;
   height: 50px;
@@ -72,3 +80,25 @@ a{
   color: white;
   text-align: center;
 }
+
+#lotto{
+  border: 7px solid white;
+  border-radius: 1em;
+  width: 400px;
+  margin: auto;
+  margin-top: 18px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#number{
+  border: 5px solid white;
+  border-radius: 0.5em;
+  background-color: white;
+  color: #424242;
+  width: 280px;
+  margin: auto;
+  margin-top: 18px;
+  vertical-align: middle;
+  text-align: center;
+  }

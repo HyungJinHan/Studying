@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body{
+  font-family: 'Jua', sans-serif;
+  letter-spacing: 0.5px;
+}
 #day_night{
   background-color: white;
   color: black;
@@ -6,6 +12,7 @@
   font-weight:bold;
   position: fixed;
   border-radius:8px;
+  cursor: pointer;
 }
 #day_night:hover{
   background-color: #424242;
@@ -13,6 +20,7 @@
   font-size:15px;
   font-weight:bold;
   position: fixed;
+  cursor: pointer;
 }
 .heman{
   background-color: white;
@@ -21,6 +29,8 @@
   font-size:15px;
   font-weight:bold;
   border-radius:10px;
+  font-family: 'Jua', sans-serif;
+  cursor: pointer;
 }
 .heman:hover{
   background-color: pink;
@@ -29,8 +39,10 @@
   font-size:15px;
   font-weight:bold;
   border-radius:20px;
+  font-family: 'Jua', sans-serif;
+  cursor: pointer;
 }
-.tab {
+.tab{
   color: #A4A4A4;
 }
 #pic{
@@ -44,6 +56,7 @@
   font-weight:bold;
   position: fixed;
   border-radius:8px;
+  cursor: pointer;
 }
 #생활코딩:hover{
   background-color: #424242;
@@ -51,6 +64,7 @@
   font-size:15px;
   font-weight:bold;
   position: fixed;
+  cursor: pointer;
 }
 #메인으로{
   background-color: white;
@@ -60,6 +74,7 @@
   font-weight:bold;
   position: fixed;
   border-radius:8px;
+  cursor: pointer;
 }
 #메인으로:hover{
   background-color: #424242;
@@ -67,6 +82,7 @@
   font-size:15px;
   font-weight:bold;
   position: fixed;
+  cursor: pointer;
 }
 #다른곳{
   background-color: white;
@@ -76,6 +92,7 @@
   font-weight:bold;
   position: fixed;
   border-radius:8px;
+  cursor: pointer;
 }
 #다른곳:hover{
   background-color: #424242;
@@ -83,6 +100,7 @@
   font-size:15px;
   font-weight:bold;
   position: fixed;
+  cursor: pointer;
 }
 a{
   text-decoration: none;
@@ -116,11 +134,14 @@ h3{
 #article{
   text-align: center;
 }
-@media(max-width:890px) {
+@media(max-width:890px){
   #grid{
     display: block;
   }
   #grid ul{
     border-right:none;
   }
+}
+#disqus_thread{
+  font-family: 'Jua', sans-serif;
 }

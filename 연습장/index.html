@@ -46,6 +46,34 @@
     </ul>
       <div id="article">
         <h2>📝 간단하게 메모하는 곳 📝</h2>
+        <div id="lotto"><h2>
+        <script>
+          var Lotto = [];
+          // 6개의 값을 나열시키기 위해 배열에 값은 담지 않음
+          for(var i_lot = 0; i_lot < 6; i_lot++) {
+          // 6개의 인자 출력 for문
+            var num_lot = Math.floor(Math.random() * 44) + 1;
+            // Math.random으로 0~1 사이의 소수점을 44와 곱한 후, floor로 소수점을 버림
+            // 그 뒤로 0부터 시작하기 때문에 1을 더해서 1~45 지정
+            for(var j_lot in Lotto) {
+            // for in 문으로 Lotto라는 객체를 나열
+              while(num_lot == Lotto[j_lot]) {
+              // while문을 사용하여 새로나온 숫자가 기존 숫자와 같아지는 상황을 체크
+                num_lot = Math.floor(Math.random() * 44) + 1;
+                // 중복되는 숫자가 나올 시, 다시 정수화를 통해 새로운 숫자를 재생성
+              }
+            }
+            Lotto.push(num_lot);
+            // 중복을 제외한 정수화한 Lotto 번호를 배열의 마지막에 넣음
+          }
+            Lotto.sort(function(a, b) {
+              return a - b;
+            // sort를 통해 정렬을 하고, 리턴값을 a - b로 지정해서 오름차순으로 정렬
+            });
+          document.write("🍀 오늘의 행운의 숫자는? 🍀", "<br>");
+          document.write("- " + Lotto + " -");
+        </script>
+        </h2></div>
         <div id="pic">
           <p><img id="myImage" src="히맨/히맨 메인.gif" width="300px"><br><br>
           <b>→</b> <button class="heman" onclick="document.getElementById('myImage').src='히맨/히맨 메인.gif'">HEYYEYAAEYAAA</button>
@@ -88,16 +116,16 @@
 
     <p><div id="disqus_thread">
     <script>
-    var disqus_config = function () {
-        this.page.identifier = 'a unique identifier for each page where Disqus is present';
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://ggujeok.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
+      var disqus_config = function () {
+          this.page.identifier = 'a unique identifier for each page where Disqus is present';
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ggujeok.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">

@@ -5,4 +5,3 @@
 - 별도의 js 파일을 통한 모듈화 연습 실시
 - [생활코딩 JavaScript 언어 강의](https://opentutorials.org/course/743)
 - [JavaScript 연습장](https://hyungjinhan.github.io/Study-JavaScript-done/JavaScript/index.html)
-- 

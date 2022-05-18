@@ -21,7 +21,7 @@
       }
     </script>
     <h1>JavaScript's Syntax</h1>
-
+    <br>
     This is JavaScript Test File.
     <a href="https://opentutorials.org/course/50" target="_blank" title="새 탭으로 열기">(<u>생활코딩's JavaScript 사전</u>)</a><br>
     document.write - 웹 페이지 상으로 출력<br>
@@ -252,813 +252,932 @@
          alert("You Are Not My Family"); // id나 비번 둘 중 하나 틀림
        };
       */
-      </script>
-        <br>
-        <h2>not 연산자 (!true / !false)</h2>
-        <br>
-      <script>
-        document.write("true나 false 앞에 !가 있다면 반대의 결과 도출", "<br>",
-        " → 예시 : !true = false / !false = true");
-      </script>
-        <br>
-        <h2>Boolean(true, false)의 대체제</h2>
-        <br>
-      <script>
-        document.write(true==1, " / ", true=="1", " / ", true==2,
-        " → JavaScript에서 true는 1과 같음 (==)", "<br>");
-        document.write(false==0, " / ", false=="2",
-        " → JavaScript에서 false는 0과 같음 (==)", "<br>");
-        document.write("↓ 그 외의 false의 값의 대체제 ↓", "<br>",
-        "빈문자열, undefined, 할당되지 않은 변수, null, NaN");
-      </script>
-        <br>
-        <h2>반복문 (Loop / Iterate)</h2>
-        <br>
-      <script>
-        document.write("-----while-----", "<br>")
-        var w = 0;
-        while(w < 5) {
-          w = w + 1
-          document.write("Hello while "+ w +"<br>")
-        };
-        document.write("1) w이라는 변수를 0으로 지정", "<br>",
-        "2) while()의 값에 w이 5보다 작을때 (w < 5) 반복문 종료 지정", "<br>",
-        "3) w이 1씩 더해지는 사항을 w로 지정", "<br>")
+    </script>
+      <br>
+      <h2>not 연산자 (!true / !false)</h2>
+      <br>
+    <script>
+      document.write("true나 false 앞에 !가 있다면 반대의 결과 도출", "<br>",
+      " → 예시 : !true = false / !false = true");
+    </script>
+      <br>
+      <h2>Boolean(true, false)의 대체제</h2>
+      <br>
+    <script>
+      document.write(true==1, " / ", true=="1", " / ", true==2,
+      " → JavaScript에서 true는 1과 같음 (==)", "<br>");
+      document.write(false==0, " / ", false=="2",
+      " → JavaScript에서 false는 0과 같음 (==)", "<br>");
+      document.write("↓ 그 외의 false의 값의 대체제 ↓", "<br>",
+      "빈문자열, undefined, 할당되지 않은 변수, null, NaN");
+    </script>
+      <br>
+      <h2>반복문 (Loop / Iterate)</h2>
+      <br>
+    <script>
+      document.write("-----while-----", "<br>")
+      var w = 0;
+      while(w < 5) {
+        w = w + 1
+        document.write("Hello while "+ w +"<br>")
+      };
+      document.write("1) w이라는 변수를 0으로 지정", "<br>",
+      "2) while()의 값에 w이 5보다 작을때 (w < 5) 반복문 종료 지정", "<br>",
+      "3) w이 1씩 더해지는 사항을 w로 지정", "<br>")
 
-        document.write("<br>", "-----for-----", "<br>")
-        for(var f = 0; f < 5; f = f + 1) {
-          document.write("Hello for "+ (f+1) +"<br>")
-        };
-        document.write("while이랑 다르게 for()의 값에 (변수; 반복수; 반복실행 조건)을 전부 입력함", "<br>",
-        "f = f + 1을 ++f(0부터 시작해서 1씩 더함), f++(1부터 시작해서 1씩 더함)으로 대체 가능")
+      document.write("<br>", "-----for-----", "<br>")
+      for(var f = 0; f < 5; f = f + 1) {
+        document.write("Hello for "+ (f+1) +"<br>")
+      };
+      document.write("while이랑 다르게 for()의 값에 (변수; 반복수; 반복실행 조건)을 전부 입력함", "<br>",
+      "f = f + 1을 ++f(0부터 시작해서 1씩 더함), f++(1부터 시작해서 1씩 더함)으로 대체 가능")
+    </script>
+      <br>
+      <h2>반복문 제어</h2>
+      <br>
+    <script>
+      document.write("-----break-----", "<br>")
+      for(var f1 = 0; f1 < 10; f1++) {
+        if(f1 === 7) {
+          break;
+        }
+          document.write("Hello for, break "+ (f1+1) +"<br>")
+      };
+      document.write("if문을 사용하여 한도를 정한 뒤 break 지정", "<br>");
+
+      document.write("<br>", "-----continue-----", "<br>")
+      for(var f2 = 0; f2 < 10; f2++) {
+        if(f2 === 7) {
+          continue;
+        }
+          document.write("Hello for, continue "+ (f2+1) +"<br>")
+      };
+      document.write("if문을 사용하여 지정한 값의 다음 값만 지우고 계속해서 반복 실행");
       </script>
         <br>
-        <h2>반복문 제어</h2>
+        <h2>반복문 중첩</h2>
         <br>
       <script>
-        document.write("-----break-----", "<br>")
-        for(var f1 = 0; f1 < 10; f1++) {
-          if(f1 === 7) {
-            break;
+        for(var ff = 0; ff < 3; ff++) {
+          for(var j = 0; j < 3; j++) {
+            document.write("Hello for "+ff+(j+1)+"<br>")
+            // ff는 0부터 시작하는 앞자리, j+1은 1부터 시작하는 뒷자리
           }
-            document.write("Hello for, break "+ (f1+1) +"<br>")
         };
-        document.write("if문을 사용하여 한도를 정한 뒤 break 지정", "<br>");
+        document.write("반복문 내에 반복문을 중첩할 수 있음", "<br>",
+        "(\"Hello for \"+ff+(j+1)+\"&lt;br&gt;\")의 경우,<br> 문자와 문자 사이에 있는 +ff+(j+1)+ 라는 숫자는 자동으로 문자화 시켜줌");
+    </script>
+      <br>
+      <h2>함수 (Function)</h2>
+      <br>
+    <script>
+      function example() {
+        document.write("function example()을 이용해 example 안에 출력할 값을 지정");
+        document.write("<br>", "함수 출력은 example();으로 하며 다수의 값 지정 가능");
+        document.write("<br>", "변수와 비슷하다고 볼 수 있으며, 어디서든 재사용 가능");
+      };
+      example(); // 함수의 경우 함수로 정한 값 뒤에 ()를 넣어야 함
 
-        document.write("<br>", "-----continue-----", "<br>")
-        for(var f2 = 0; f2 < 10; f2++) {
-          if(f2 === 7) {
-            continue;
-          }
-            document.write("Hello for, continue "+ (f2+1) +"<br>")
+      document.write("<br>", "<br>", "-----return (출력)-----");
+      function get_family1() {
+        return "<br>get_family1를 함수로 지정 후";
+      }
+      function get_family2() {
+        return "<br>return 값에 출력할 값을 지정,";
+      }
+      function get_family3() {
+        return "<br>document.write()로 값을 출력";
+      }
+      document.write(get_family1());
+      document.write(get_family2());
+      document.write(get_family3());
+
+      function example2() {
+        return "<br>return은 상단의 하나의 출력값만을 표시";
+        return "<br>어차피 안나올거잖아 1";
+        return "<br>어차피 안나올거잖아 2";
+        return "<br>어차피 안나올거잖아 3";
+      }
+      document.write(example2());
+
+      document.write("<br>", "<br>", "-----Input (입력)-----");
+      function get_arguments(arg1, arg2) {
+        return arg1;
+      }
+      document.write(get_arguments("<br> argument는 인자, parameter는 매개변수 <br>"));
+      document.write(get_arguments("1) function get_argument(arg)<br>"));
+      document.write(get_arguments("2) {return arg;<br>"));
+      document.write(get_arguments("3) document.write(get_argument(이거슨 예시))};<br>"));
+      document.write(get_arguments("4) 결과 : 이거슨 예시<br>"));
+      document.write(get_arguments("function get_arguments(arg1, arg2) 사용으로<br>"));
+      document.write(get_arguments("인자를 복수로 지정 가능<br>"));
+    </script>
+    <script>
+      function get_arguments(arg1, arg2) {
+        return arg1 * arg2;
+      }
+      document.write("인자값을 2개 동시에 지정 후, return arg1(80) * arg2(40)을 하면");
+      document.write("<br>결과 : 3200<br>")
+      document.write(get_arguments(80, 40));
+    </script>
+    <script>
+      example3 = function() {
+        return "<br>이거슨 순서 바꾼 예시";
+      };
+      document.write(example3());
+    </script>
+      <br>
+      <h2>배열 (Array)</h2>
+      <br>
+    <script>
+      var array_ex1 = ["대괄호에 ", "들어가는 ", "사항들은 ", "Element (원소)"];
+        document.write(array_ex1[0]);
+        document.write(array_ex1[1]);
+        document.write(array_ex1[2]);
+        document.write(array_ex1[3]+"<br>");
+      var array_ex2 = ["원소를 ", "출력할 때 ", "사용하는 숫자는 ", "Index (색인)"];
+        document.write(array_ex2[0]);
+        document.write(array_ex2[1]);
+        document.write(array_ex2[2]);
+        document.write(array_ex2[3]);
+
+      document.write("<br>", "<br>", "-----배열과 반복문-----", "<br>");
+      var get_examples = ["this is ", "array and ", "loop's ", "collaboration ", "(feat.toUpperCase())"];
+      for (var ex = 0; ex < 4; ex++) {
+        document.write(get_examples[ex]);
+      };
+
+      document.write("<br>", get_examples[0].toUpperCase());
+      document.write(get_examples[1].toUpperCase());
+      document.write(get_examples[2].toUpperCase());
+      document.write(get_examples[3].toUpperCase(), "<br>");
+      document.write(get_examples[4]);
+      document.write(" ", get_examples.length, "개의 값", "<br>");
+
+      var ex_family = ["한상현", " ", "조희성", "<br>", "한형진", " ", "한형주", "<br>", "강원식", " ", "조희경", "<br>", "강지훈", " ", "강지혜", "<br>", "김도형", " ", "조희남", " ", "김예빈"];
+        for (var ex_fam = 0; ex_fam < ex_family.length; ex_fam++) {
+        // 원소의 개수를 ex_fam 반복의 한계값으로 지정
+          document.write(ex_family[ex_fam]);
+          // 결과적으로 원소의 수가 변하더라도 탄력적으로 변경됨
         };
-        document.write("if문을 사용하여 지정한 값의 다음 값만 지우고 계속해서 반복 실행");
-        </script>
-          <br>
-          <h2>반복문 중첩</h2>
-          <br>
-        <script>
-          for(var ff = 0; ff < 3; ff++) {
-            for(var j = 0; j < 3; j++) {
-              document.write("Hello for "+ff+(j+1)+"<br>")
-              // ff는 0부터 시작하는 앞자리, j+1은 1부터 시작하는 뒷자리
-            }
-          };
-          document.write("반복문 내에 반복문을 중첩할 수 있음", "<br>",
-          "(\"Hello for \"+ff+(j+1)+\"&lt;br&gt;\")의 경우,<br> 문자와 문자 사이에 있는 +ff+(j+1)+ 라는 숫자는 자동으로 문자화 시켜줌");
-      </script>
-        <br>
-        <h2>함수 (Function)</h2>
-        <br>
-      <script>
-        function example() {
-          document.write("function example()을 이용해 example 안에 출력할 값을 지정");
-          document.write("<br>", "함수 출력은 example();으로 하며 다수의 값 지정 가능");
-          document.write("<br>", "변수와 비슷하다고 볼 수 있으며, 어디서든 재사용 가능");
-        };
-        example(); // 함수의 경우 함수로 정한 값 뒤에 ()를 넣어야 함
+      document.write("<br>", " → ex_fam의 반복의 한계값을 변수 ex_family의 개수인", "<br>", "ex_family.length로 지정하면 배열 내의", "<br>", "원소의 개수가 변하더라도 출력값이 탄력적으로 변경");
 
-        document.write("<br>", "<br>", "-----return (출력)-----");
-        function get_family1() {
-          return "<br>get_family1를 함수로 지정 후";
-        }
-        function get_family2() {
-          return "<br>return 값에 출력할 값을 지정,";
-        }
-        function get_family3() {
-          return "<br>document.write()로 값을 출력";
-        }
-        document.write(get_family1());
-        document.write(get_family2());
-        document.write(get_family3());
-
-        function example2() {
-          return "<br>return은 상단의 하나의 출력값만을 표시";
-          return "<br>어차피 안나올거잖아 1";
-          return "<br>어차피 안나올거잖아 2";
-          return "<br>어차피 안나올거잖아 3";
-        }
-        document.write(example2());
-
-        document.write("<br>", "<br>", "-----Input (입력)-----");
-        function get_arguments(arg1, arg2) {
-          return arg1;
-        }
-        document.write(get_arguments("<br> argument는 인자, parameter는 매개변수 <br>"));
-        document.write(get_arguments("1) function get_argument(arg)<br>"));
-        document.write(get_arguments("2) {return arg;<br>"));
-        document.write(get_arguments("3) document.write(get_argument(이거슨 예시))};<br>"));
-        document.write(get_arguments("4) 결과 : 이거슨 예시<br>"));
-        document.write(get_arguments("function get_arguments(arg1, arg2) 사용으로<br>"));
-        document.write(get_arguments("인자를 복수로 지정 가능<br>"));
-      </script>
-      <script>
-        function get_arguments(arg1, arg2) {
-          return arg1 * arg2;
-        }
-        document.write("인자값을 2개 동시에 지정 후, return arg1(80) * arg2(40)을 하면");
-        document.write("<br>결과 : 3200<br>")
-        document.write(get_arguments(80, 40));
-      </script>
-      <script>
-        example3 = function() {
-          return "<br>이거슨 순서 바꾼 예시";
-        };
-        document.write(example3());
-      </script>
-        <br>
-        <h2>배열 (Array)</h2>
-        <br>
-      <script>
-        var array_ex1 = ["대괄호에 ", "들어가는 ", "사항들은 ", "Element (원소)"];
-          document.write(array_ex1[0]);
-          document.write(array_ex1[1]);
-          document.write(array_ex1[2]);
-          document.write(array_ex1[3]+"<br>");
-        var array_ex2 = ["원소를 ", "출력할 때 ", "사용하는 숫자는 ", "Index (색인)"];
-          document.write(array_ex2[0]);
-          document.write(array_ex2[1]);
-          document.write(array_ex2[2]);
-          document.write(array_ex2[3]);
-
-        document.write("<br>", "<br>", "-----배열과 반복문-----", "<br>");
-        var get_examples = ["this is ", "array and ", "loop's ", "collaboration ", "(feat.toUpperCase())"];
-        for (var ex = 0; ex < 4; ex++) {
-          document.write(get_examples[ex]);
-        };
-
-        document.write("<br>", get_examples[0].toUpperCase());
-        document.write(get_examples[1].toUpperCase());
-        document.write(get_examples[2].toUpperCase());
-        document.write(get_examples[3].toUpperCase(), "<br>");
-        document.write(get_examples[4]);
-        document.write(" ", get_examples.length, "개의 값", "<br>");
-
-        var ex_family = ["한상현", " ", "조희성", "<br>", "한형진", " ", "한형주", "<br>", "강원식", " ", "조희경", "<br>", "강지훈", " ", "강지혜", "<br>", "김도형", " ", "조희남", " ", "김예빈"];
-          for (var ex_fam = 0; ex_fam < ex_family.length; ex_fam++) {
-          // 원소의 개수를 ex_fam 반복의 한계값으로 지정
-            document.write(ex_family[ex_fam]);
-            // 결과적으로 원소의 수가 변하더라도 탄력적으로 변경됨
-          };
-        document.write("<br>", " → ex_fam의 반복의 한계값을 변수 ex_family의 개수인", "<br>", "ex_family.length로 지정하면 배열 내의", "<br>", "원소의 개수가 변하더라도 출력값이 탄력적으로 변경");
-
-        document.write("<br>", "<br>", "-----배열의 제어 (push : 맨 뒤)-----", "<br>");
-        var ex_this = ["변수로 지정한 ex_this 배열에 "+".push(추가됩니다)"+"를 입력하면 "+"<br>"+"맨 뒷자리에 "+"지정한 값이 "];
-        ex_this.push("추가됩니다");
-        document.write(ex_this);
+      document.write("<br>", "<br>", "-----배열의 제어 (push : 맨 뒤)-----", "<br>");
+      var ex_this = ["변수로 지정한 ex_this 배열에 "+".push(추가됩니다)"+"를 입력하면 "+"<br>"+"맨 뒷자리에 "+"지정한 값이 "];
+      ex_this.push("추가됩니다");
+      document.write(ex_this);
           // push는 맨 뒷자리에 추가
 
-        document.write("<br>", "<br>", "-----배열의 제어 (concat : 복수)-----", "<br>");
-        var ex_this2 = ["변수로 지정한 ex_this2 배열에 "+".concat([여러개가, 추가됩니다])"+"를<br>입력하면 "+"맨 뒷자리에 "+"지정한 값이 "];
-        ex_this2 = ex_this2.concat(["여러개가 ", "추가됩니다"]);
-        document.write(ex_this2);
+      document.write("<br>", "<br>", "-----배열의 제어 (concat : 복수)-----", "<br>");
+      var ex_this2 = ["변수로 지정한 ex_this2 배열에 "+".concat([여러개가, 추가됩니다])"+"를<br>입력하면 "+"맨 뒷자리에 "+"지정한 값이 "];
+      ex_this2 = ex_this2.concat(["여러개가 ", "추가됩니다"]);
+      document.write(ex_this2);
 
-        document.write("<br>", "<br>", "-----배열의 제어 (unshift : 맨 앞)-----", "<br>");
-        var ex_this3 = [" 변수로 지정한 ex_this3 배열에 "+"<br>"+".unshift(원소를 맨 앞에 추가하려면)"+"을 입력하면 "+"맨 앞자리에 "+"지정한 값이 추가됨"];
-        ex_this3.unshift("원소를 맨 앞에 추가하려면");
-        document.write(ex_this3);
+      document.write("<br>", "<br>", "-----배열의 제어 (unshift : 맨 앞)-----", "<br>");
+      var ex_this3 = [" 변수로 지정한 ex_this3 배열에 "+"<br>"+".unshift(원소를 맨 앞에 추가하려면)"+"을 입력하면 "+"맨 앞자리에 "+"지정한 값이 추가됨"];
+      ex_this3.unshift("원소를 맨 앞에 추가하려면");
+      document.write(ex_this3);
 
-        document.write("<br>", "<br>", "-----배열의 제어 (splice : 중간)-----", "<br>");
-        var ex_this4 = [" 변수로 지정한 ex_this4 배열에 ", "<br>", ".splice(원하는 자리의 번호와 입력한 원소가)", "를 입력하면 ", "<br>",  "추가됨"];
-        ex_this4.splice(5, 0, "원하는 자리의 번호와 입력한 인자가");
-        document.write(ex_this4);
+      document.write("<br>", "<br>", "-----배열의 제어 (splice : 중간)-----", "<br>");
+      var ex_this4 = [" 변수로 지정한 ex_this4 배열에 ", "<br>", ".splice(원하는 자리의 번호와 입력한 원소가)", "를 입력하면 ", "<br>",  "추가됨"];
+      ex_this4.splice(5, 0, "원하는 자리의 번호와 입력한 인자가");
+      document.write(ex_this4);
 
-        document.write("<br>", "<br>", "-----배열의 제어 (splice : 삭제)-----", "<br>");
-        var ex_this5 = [" 앞의 숫자는 몇번째에 들어갈지의 숫자를", "<br>", "뒤의 숫자는 들어갈 자리에 몇개의 원소를 삭제할지를 의미", "<br>", "ex_this5.splice(원하는 자리에, 삭제된 내용 대신)", "<br>", "을 (삭제될 내용) 자리에 입력하면 ", "<br>", "삭제될 내용", "으로 추가됨"];
-        ex_this5.splice(8, 1, "원하는 자리에", "삭제된 내용 대신");
-        document.write(ex_this5);
+      document.write("<br>", "<br>", "-----배열의 제어 (splice : 삭제)-----", "<br>");
+      var ex_this5 = [" 앞의 숫자는 몇번째에 들어갈지의 숫자를", "<br>", "뒤의 숫자는 들어갈 자리에 몇개의 원소를 삭제할지를 의미", "<br>", "ex_this5.splice(원하는 자리에, 삭제된 내용 대신)", "<br>", "을 (삭제될 내용) 자리에 입력하면 ", "<br>", "삭제될 내용", "으로 추가됨"];
+      ex_this5.splice(8, 1, "원하는 자리에", "삭제된 내용 대신");
+      document.write(ex_this5);
 
-        document.write("<br>", "<br>", "-----배열의 제거 (shift : 맨 앞 제거)-----", "<br>");
-        var ex_this6 = ["제거할 내용", "맨 앞의 (제거할 내용)은 ", "<br>", "ex_this6.shift()", "을 입력하면 맨 앞이 제거됨"];
-        ex_this6.shift();
-        document.write(ex_this6);
+      document.write("<br>", "<br>", "-----배열의 제거 (shift : 맨 앞 제거)-----", "<br>");
+      var ex_this6 = ["제거할 내용", "맨 앞의 (제거할 내용)은 ", "<br>", "ex_this6.shift()", "을 입력하면 맨 앞이 제거됨"];
+      ex_this6.shift();
+      document.write(ex_this6);
 
-        document.write("<br>", "<br>", "-----배열의 제거 (shift : 맨 뒤 제거)-----", "<br>");
-        var ex_this7 = ["맨 뒤의 (제거할 내용)은 ", "<br>", "ex_this7.pop()", "을 입력하면 맨 뒤이 제거됨", "제거할 내용"];
-        ex_this7.pop("");
-        document.write(ex_this7);
+      document.write("<br>", "<br>", "-----배열의 제거 (shift : 맨 뒤 제거)-----", "<br>");
+      var ex_this7 = ["맨 뒤의 (제거할 내용)은 ", "<br>", "ex_this7.pop()", "을 입력하면 맨 뒤이 제거됨", "제거할 내용"];
+      ex_this7.pop("");
+      document.write(ex_this7);
 
-        document.write("<br>", "<br>", "-----배열의 정렬 (sort : 글자를 순서대로 정리)-----", "<br>");
-        var ex_this8 = ["가", "a", "라", "d", "나", "e", "다", "b", "사", "f", "바", "c", "마", "g"];
-        ex_this8.sort();
-        document.write(ex_this8);
+      document.write("<br>", "<br>", "-----배열의 정렬 (sort : 글자를 순서대로 정리)-----", "<br>");
+      var ex_this8 = ["가", "a", "라", "d", "나", "e", "다", "b", "사", "f", "바", "c", "마", "g"];
+      ex_this8.sort();
+      document.write(ex_this8);
 
-        document.write("<br>", "<br>", "-----배열의 정렬 (reverse : 글자를 역순으로 정리)-----", "<br>");
-        ex_this8.reverse();
-        document.write(ex_this8);
-      </script>
-        <br>
-        <h2>객체 (Object)</h2>
-        <br>
-      <script>
-        var fam_age = {"한상현" : 55, "조희성" : 50, "한형진" : 27, "한형주" : 22};
-        document.write("형식 → {\"객체\" : \"원하는 value\"}<br>");
-        document.write("출력 → fam_age[\"xxx\"] / fam_age.xxx<br>");
-        document.write(fam_age["한상현"], " / "); document.write(fam_age.한상현);
+      document.write("<br>", "<br>", "-----배열의 정렬 (reverse : 글자를 역순으로 정리)-----", "<br>");
+      ex_this8.reverse();
+      document.write(ex_this8);
+    </script>
+      <br>
+      <h2>객체 (Object)</h2>
+      <br>
+    <script>
+      var fam_age = {"한상현" : 55, "조희성" : 50, "한형진" : 27, "한형주" : 22};
+      document.write("형식 → {\"객체\" : \"원하는 value\"}<br>");
+      document.write("출력 → fam_age[\"xxx\"] / fam_age.xxx<br>");
+      document.write(fam_age["한상현"], " / "); document.write(fam_age.한상현);
         // fam_age["한상"+"현"]도 문자열이기에 가능 / fam_age."한상"+"현" 불가능
 
-        document.write("<br>", "<br>", "-----객체 & 반복문 (for)-----", "<br>");
-        for(key in fam_age) {
-          document.write("이름 : "+key+" | 나이 : "+fam_age[key]+"<br>")
-        };
-        document.write("↓ for문 형식 ↓<br>for(key in fam_age) {}<br>");
-        document.write("↓ {}내 형식 ↓<br>객체(key) : \"\+key\+\" value : \"\+fam_age[key]\+\"");
-        // key는 변수를 지정해서 원하는 값으로 변경 가능
-        for(key in fam_age) {
-          document.write("<ul><li>이름 : "+key+" | 나이 : "+fam_age[key]+"</li></ul>")
-        };
-        // <ul><li> 태그를 통해 리스트 값으로도 출력 가능
+      document.write("<br>", "<br>", "-----객체 & 반복문 (for)-----", "<br>");
+      for(key in fam_age) {
+        document.write("이름 : "+key+" | 나이 : "+fam_age[key]+"<br>")
+      };
+      document.write("↓ for문 형식 ↓<br>for(key in fam_age) {}<br>");
+      document.write("↓ {}내 형식 ↓<br>객체(key) : \"\+key\+\" value : \"\+fam_age[key]\+\"");
+      // key는 변수를 지정해서 원하는 값으로 변경 가능
+      for(key in fam_age) {
+        document.write("<ul><li>이름 : "+key+" | 나이 : "+fam_age[key]+"</li></ul>")
+      };
+      // <ul><li> 태그를 통해 리스트 값으로도 출력 가능
 
-        document.write("<br>", "-----객체지향-----", "<br>");
-        var fam_child = {
-          "child" : {"한형진" : 27, "한형주" : 22, "강지훈" : 20, "강지혜" : 19}
+      document.write("<br>", "-----객체지향-----", "<br>");
+      var fam_child = {
+        "child" : {"한형진" : 27, "한형주" : 22, "강지훈" : 20, "강지혜" : 19}
+      }
+      document.write("이거슨 내가 목록에서 불러온 것 : ", fam_child["child"]["한형진"], "<br>");
+
+      var ex_func = {
+        "func" : function(){
+          return "이거슨 객체에는 함수도 포함될 수 있다는 예시임 (return)";
         }
-        document.write("이거슨 내가 목록에서 불러온 것 : ", fam_child["child"]["한형진"], "<br>");
+      }
+      document.write(ex_func["func"]());
 
-        var ex_func = {
-          "func" : function(){
-            return "이거슨 객체에는 함수도 포함될 수 있다는 예시임 (return)";
+      var fam_child2 = {
+        "child2" : {"한형진" : 27, "한형주" : 22, "강지훈" : 20, "강지혜" : 19},
+        "show" : function() {
+          for(var ages in this.child2) {
+          // ages라는 변수를 주고 그 변수를 바로 위의 객체를 의미하는 this를 사용해서
+          // this.child2로 지정 (여기서는 각자의 이름이 객체)
+            document.write("<br>", ages, " : ", this.child2[ages]);
+            // 위에서 지정한 변수인 ages를 써서 이름이 앞에 오도록 함 (자유임)
+            // this.child2[ages]는 그 이름에 해당하는 나이를 의미
           }
         }
-        document.write(ex_func["func"]());
+      }
+      fam_child2["show"](); // = fam_child2.show();
+      // 위에서 이미 document.write를 사용해서 출력할 준비를 했기에 함수만 간단히 호출함
+      document.write("<br>필요한 데이터와 처리 방식을 하나로 묶어서<br>프로그래밍 하는 것 : 객체지향")
+      // 이러한 프로그래밍을 객체지향 프로그래밍이라고 함
+    </script>
+      <br>
+      <h2>모듈 (Module)</h2>
+      <br>
+    <script>
+      document.write(welcome());
 
-        var fam_child2 = {
-          "child2" : {"한형진" : 27, "한형주" : 22, "강지훈" : 20, "강지혜" : 19},
-          "show" : function() {
-            for(var ages in this.child2) {
-            // ages라는 변수를 주고 그 변수를 바로 위의 객체를 의미하는 this를 사용해서
-            // this.child2로 지정 (여기서는 각자의 이름이 객체)
-              document.write("<br>", ages, " : ", this.child2[ages]);
-              // 위에서 지정한 변수인 ages를 써서 이름이 앞에 오도록 함 (자유임)
-              // this.child2[ages]는 그 이름에 해당하는 나이를 의미
+      document.write("<br>", "<br>", "-----라이브러리-----", "<br>");
+    </script>
+      <ul id="fam_list">
+        <li>hsh</li>
+        <li>jhs</li>
+        <li>hhj</li>
+      </ul>
+      <input type="button" value="Change" id="change_btn">
+    <script>
+      $("#change_btn").click(function(){ // 버튼 클릭시 실행될 작업을 지정하는 코드
+        $("#fam_list li").text("$(\"xxx\").text를 사용하여 jQurey를 불러와 값을 출력");
+      });
+    </script>
+      <br>
+      <h2>정규 표현식 (Regular Expression)</h2>
+      <br>
+    <script>
+      document.write("-----정규 표현식 (리터럴)-----", "<br>");
+      document.write("/xxx/; == new RegEXP(\"xxx\");");
+      document.write("<br>")
+      document.write("pattern.exec == \"xxx\".match(pattern)");
+      document.write("<br>")
+      var pattern = /....찾고 싶은 것....../; // == var pattern = new RegEXP("xx");
+      // 정규 표현식으로써 /xxx/; == new RegEXP();
+      document.write(pattern.exec("pattern은 자신이 찾고 싶은 것을 찾는 것")); document.write(" → pattern.exec");
+      // 변수에 pattern을 정할 때, 찾을 내용 앞이나 뒤에 .을 추가하면 다음 내용까지 같이 찾음
+      // 추출의 목적
+      document.write("<br>");
+      document.write("pattern은 자신이 찾고 싶은 것을 찾는 것".match(pattern)); document.write(" → \"xxx\".match(pattern)");
+      // == document.write(pattern.exec(xxx));
+      document.write("<br>");
+      document.write(pattern.test("pattern은 자신이 찾고 싶은 것을 찾는 것")); document.write(" → pattern.test");
+      // boolean(참, 거짓) 값 도출 목적
+      document.write("<br>");
+      document.write(("replace는 자신이 찾고 싶은 것을 찾는 것".replace(pattern, "내가 찾고 있는 것을 찾아서 변경"))); document.write(" → \"xxx\".replace(pattern)");
+      // 찾은 내용을 변경할 내용으로 지정 후 리턴값으로 출력할 목적
+
+      document.write("<br>", "<br>", "-----정규 표현식 (옵션)-----", "<br>");
+      var pattern2 = /J/; // i를 입력하지 않아 대문자 구분 O
+      document.write("Hanhyungjin".match(pattern2)); document.write(" → var pattern2 = /J/;");
+      document.write("<br>");
+      var pattern3 = /J/i; // i를 입력해서 대문자 구분 X
+      document.write("Hanhyungjin".match(pattern3)); document.write(" → var pattern3 = /J/i;");
+      document.write("<br>");
+      var pattern4 = /n/g; // g를 입력하면 해당 값을 모두 도출
+      document.write("hanhyunjin".match(pattern4)); document.write(" → var pattern4 = /n/g;");
+      // document.write("<br>", "-----정규 표현식 (캡쳐)-----", "<br>");
+      // var wsw = /(\w+)\s(w+)/;
+      // // 여러 글자의 단어 + 여백 + 여러 글자의 단어 의미
+      // // xxx xxx이라는 문장의 형식을 말함(특수문자 X)
+      // document.write("입니다 변경전".replace(wsw, "$2, $1"));
+      //이유는 모르겠으나 순서 변경이 안됨
+      // document.write("<br>", "-----정규 표현식 (치환)-----", "<br>");
+    </script>
+      <br>
+      <h2>유효범위 (Scope)</h2>
+      <br>
+    <script>
+      document.write("JavaScript의 지역변수는 함수에서만 유효", "<br>");
+      var vscope = "global"; // 전역변수 (문서의 전체에서 접근 가능)
+        function fscope() {
+          var vscope = "local"; // 지역변수 (함수 내에서만 한정해서 접근 가능)
+          document.write(vscope);
+        }
+        fscope(); // 함수 내부의 변수만을 출력 (결과 : local)
+      document.write("<br>", "전역변수보다는 지역변수 사용을 권장", "<br>", "충돌, 중복을 피하기 위함임");
+
+      document.write("<br>", "<br>", "-----지역변수-----", "<br>");
+      function local_var() {
+        var i = 0;
+        // 여기서 var를 지워버리면 지역변수가 아닌 전역변수로 변경됨
+        // 결국 전역변수로써의 i = 0이 돼버리기 때문에 i를 0으로 무한으로 변경하며 에러
+      }
+      for(var i = 0; i < 10; i++) {
+        local_var();
+        document.write(i);
+      }
+
+      document.write("<br>", "<br>", "-----전역변수-----", "<br>");
+      (function (){
+        var MYAPP = {} // 전역변수 (함수에 소속되면서 지역변수로 변경)
+        MYAPP.calculator = {
+          "left" : null,
+          "right" : null
+        }
+        MYAPP.codrdinate = {
+          "left" : null,
+          "right" : null
+        }
+        MYAPP.calculator.left = 30;
+        MYAPP.calculator.right = 80;
+        function sum() {
+          return MYAPP.calculator.left + MYAPP.calculator.right;
+        }
+        document.write(sum());
+      }()); // function을 전부 ()로 묶으면 익명함수가 되고, 별도의 출력코드없이 바로 출력됨
+
+      document.write("<br>", "<br>", "-----정적 유효범위-----", "<br>");
+      var not_flex = 5; // 전역변수
+      function not_flex1() {
+        var not_flex = 10; // 지역변수
+        not_flex2();
+      }
+      function not_flex2() {
+        document.write(not_flex);
+      }
+      // not_flex라는 지역변수가 없기 때문에 전역변수로써 var not_flex = 5;를 출력
+      // 바로 위의 함수 지역변수인 var not_flex = 10;는 출력되지 않음
+      not_flex1(); // 결과는 전역변수인 var not_flex = 5;의 값인 5
+    </script>
+      <br>
+      <h2>값으로써의 함수와 콜백</h2>
+      <br>
+    <script>
+      document.write("-----값으로써의 함수-----", "<br>");
+      document.write("function a(){}와 var a = function(){}는 같은 것", "<br>");
+      function cal (func, num) {
+        return func(num)
+      }
+      function increase(num) {
+        return num+1
+      }
+      function decrease(num) {
+        return num-1
+      }
+      document.write(cal(increase, 1), "<br>");
+      document.write(cal(decrease, 1));
+
+      function cal_2(mode) {
+        var funcs = {
+          "plus" : function(left, right) {return left + right},
+          // plus를 함수로 지정
+          "minus" : function(left, right) {return left - right}
+          // minus를 함수로 지정
+        }
+        return funcs[mode];
+        // [mode]값에 plus, minus 입력으로 함수를 호출
+      }
+      document.write("<br>", cal_2("plus")(2, 1), "<br>");
+      document.write(cal_2("minus")(2, 1), "<br>");
+
+      var process = [
+        function(input) {return input + "로 먼저 1번 process가 추가되고";},
+        // 밑에서 지정한 input 값 "이거슨 예시"가 입력
+        function(input) {return input + " 다음으로 2번 process가 추가,";},
+        // 밑의 과정을 거쳐 "이거슨 예시"와 " 다음으로 2번 process가 추가," 입력
+        function(input) {return input + "<br> 다음으로 3번 process가 출력되며 반복문 종료";}
+        // 밑의 과정을 거쳐 "이거슨 예시"와 " 다음으로 2번 process가 추가,",
+        // "<br> 다음으로 3번 process가 출력되며 반복문 종료"가 마지막으로 추가됨
+        // input_i < process.length로 인해 process의 과정이 끝남과 동시에 반복문 종료
+      ];
+      var input = "이거슨 예시";
+      for(var input_i = 0; input_i < process.length; input_i++) {
+        input = process[input_i](input);
+        // input_i는 0부터 시작해서 process의 3개의 단계가 끝날때 까지 반복이므로
+        // input_i는 0, 1, 2까지의 숫자를 갖게 됨
+        // for문에서 지정한 0, 1, 2의 값이 process[input_i]에 입력됨
+      }
+      document.write(input);
+      document.write("<br>", "<br>", "-----콜백-----", "<br>");
+      var callback_num = [1, 5, 2, 3, 4, 6, 8, 7, 10, 9]
+      var sortfunc = function(a, b) {
+        // return a - b; // 뺀 값이 양수인지, 음수인지, 0인지를 판별하게 됨
+        return b - a; // 정렬을 역수로 하기 위함
+        // console.log(a, b);
+        // if (a > b) { // 만약 a가 b보다 크다면
+        //   return 1; // 1 출력
+        // } else if (a < b) { // 또한 만약에 a가 b보다 작다면
+        //   return -1; // -1 출력
+        // } else { //그렇지 않다면 (a = b)
+        //   return 0; // 0 출력 (무시)
+        // }
+      }
+      // 위의 함수를 콜백함수라고 함
+      document.write(callback_num.sort(sortfunc));
+      console.log(callback_num.sort(sortfunc));
+      // 위에서 정한 출력값으로 인해 크기를 비교해서 -1, 0, 1의 값이 출력됨
+      // -1, 0, 1을 sort하게 되는 것
+      // document.write("<br>", "-----비동기 콜백-----", "<br>");
+    </script>
+      <br>
+      <h2>클로저 (Closure)</h2>
+      <br>
+    <script>
+      document.write("-----외부함수와 내부함수-----", "<br>");
+      function outter() {
+        function inner() {
+          var title = "Hello, Closure1"
+          document.write(title);
+        }
+        inner();
+      }
+      outter(); // 결과로는 outter는 inner라는 함수를 지닌 것
+
+      document.write("<br>");
+
+      function outter2() {
+        var title2 = "Hello, Closure2"
+        return function() {
+          document.write(title2, "<br>");
+        }
+      }
+      inner2 = outter2();
+      inner2();
+      // 완전히 종료된 외부함수도 그 안에 담겨있는 내부함수를 호출하면서
+      // 다시 출력할 수 있는 것이 클로저의 특징
+
+      function factory_movie(title3) {
+      // 밑의 사항을 전부 거쳐서 와야하기 때문에 함수가 안전하게 수정, 저장이 가능
+        return {
+          get_title : function() {
+          // 여기는 값을 가져오기 위한 경로로써의 역할
+            return title3;
+          },
+          set_title : function(_title3) {
+          // 여기가 진짜 내용 (출력값 수정은 여기서만 가능)
+            if(typeof _title3 === "string") {
+            // 문자열인지 아닌지 확인하는 if문
+              title3 = _title3
+            } else {
+              alert("제목이 문자열이 아닙니다.");
             }
           }
         }
-        fam_child2["show"](); // = fam_child2.show();
-        // 위에서 이미 document.write를 사용해서 출력할 준비를 했기에 함수만 간단히 호출함
-        document.write("<br>필요한 데이터와 처리 방식을 하나로 묶어서<br>프로그래밍 하는 것 : 객체지향")
-        // 이러한 프로그래밍을 객체지향 프로그래밍이라고 함
-      </script>
-        <br>
-        <h2>모듈 (Module)</h2>
-        <br>
-      <script>
-        document.write(welcome());
+      }
+      // set_title에서 _title3는 title3과 같이 때문에 get_title의 return title3를 호출
+      // get_title의 title은 외부함수인 factory_movie(title3) 값을 리턴하고 있기때문에
+      // 결과적으로 factory_movie(title3)의 title3를 화면에 출력함
+      matrix = factory_movie("Matrix");
+      world = factory_movie("New World");
 
-        document.write("<br>", "<br>", "-----라이브러리-----", "<br>");
-      </script>
-        <ul id="fam_list">
-          <li>hsh</li>
-          <li>jhs</li>
-          <li>hhj</li>
-        </ul>
-        <input type="button" value="Change" id="change_btn">
-      <script>
-        $("#change_btn").click(function(){ // 버튼 클릭시 실행될 작업을 지정하는 코드
-          $("#fam_list li").text("$(\"xxx\").text를 사용하여 jQurey를 불러와 값을 출력");
-        });
-      </script>
-        <br>
-        <h2>정규 표현식 (Regular Expression)</h2>
-        <br>
-      <script>
-        document.write("-----정규 표현식 (리터럴)-----", "<br>");
-        document.write("/xxx/; == new RegEXP(\"xxx\");");
-        document.write("<br>")
-        document.write("pattern.exec == \"xxx\".match(pattern)");
-        document.write("<br>")
-        var pattern = /....찾고 싶은 것....../; // == var pattern = new RegEXP("xx");
-        // 정규 표현식으로써 /xxx/; == new RegEXP();
-        document.write(pattern.exec("pattern은 자신이 찾고 싶은 것을 찾는 것")); document.write(" → pattern.exec");
-        // 변수에 pattern을 정할 때, 찾을 내용 앞이나 뒤에 .을 추가하면 다음 내용까지 같이 찾음
-        // 추출의 목적
-        document.write("<br>");
-        document.write("pattern은 자신이 찾고 싶은 것을 찾는 것".match(pattern)); document.write(" → \"xxx\".match(pattern)");
-        // == document.write(pattern.exec(xxx));
-        document.write("<br>");
-        document.write(pattern.test("pattern은 자신이 찾고 싶은 것을 찾는 것")); document.write(" → pattern.test");
-        // boolean(참, 거짓) 값 도출 목적
-        document.write("<br>");
-        document.write(("replace는 자신이 찾고 싶은 것을 찾는 것".replace(pattern, "내가 찾고 있는 것을 찾아서 변경"))); document.write(" → \"xxx\".replace(pattern)");
-        // 찾은 내용을 변경할 내용으로 지정 후 리턴값으로 출력할 목적
+      document.write(matrix.get_title(), "<br>");
+      document.write(world.get_title(), "<br>");
 
-        document.write("<br>", "<br>", "-----정규 표현식 (옵션)-----", "<br>");
-        var pattern2 = /J/; // i를 입력하지 않아 대문자 구분 O
-        document.write("Hanhyungjin".match(pattern2)); document.write(" → var pattern2 = /J/;");
-        document.write("<br>");
-        var pattern3 = /J/i; // i를 입력해서 대문자 구분 X
-        document.write("Hanhyungjin".match(pattern3)); document.write(" → var pattern3 = /J/i;");
-        document.write("<br>");
-        var pattern4 = /n/g; // g를 입력하면 해당 값을 모두 도출
-        document.write("hanhyunjin".match(pattern4)); document.write(" → var pattern4 = /n/g;");
-        // document.write("<br>", "-----정규 표현식 (캡쳐)-----", "<br>");
-        // var wsw = /(\w+)\s(w+)/;
-        // // 여러 글자의 단어 + 여백 + 여러 글자의 단어 의미
-        // // xxx xxx이라는 문장의 형식을 말함(특수문자 X)
-        // document.write("입니다 변경전".replace(wsw, "$2, $1"));
-        //이유는 모르겠으나 순서 변경이 안됨
-        // document.write("<br>", "-----정규 표현식 (치환)-----", "<br>");
-      </script>
-        <br>
-        <h2>유효범위 (Scope)</h2>
-        <br>
-      <script>
-        document.write("JavaScript의 지역변수는 함수에서만 유효", "<br>");
-        var vscope = "global"; // 전역변수 (문서의 전체에서 접근 가능)
-          function fscope() {
-            var vscope = "local"; // 지역변수 (함수 내에서만 한정해서 접근 가능)
-            document.write(vscope);
-          }
-          fscope(); // 함수 내부의 변수만을 출력 (결과 : local)
-        document.write("<br>", "전역변수보다는 지역변수 사용을 권장", "<br>", "충돌, 중복을 피하기 위함임");
+      world.set_title("신세계", "<br>");
+      document.write(matrix.get_title(), "<br>");
+      document.write(world.get_title());
+    </script>
+      <br>
+      <h2>인자 (arguments)</h2>
+      <br>
+    <script>
+      function argu() {
+        var _argu = 0;
+        for (var argu2 = 0; argu2 < arguments.length; argu2++) {
+        // arguments.length : argu에 들어간 인자의 수
+          document.write(argu2+" : "+arguments[argu2]+"<br>");
+          // arguments[argu2] : argu2의 수에 따라 arue의 인자값을 출력
+          // 결과적으로 argu2는 0~4, +arguments[argu2]는 10~40
+          _argu += arguments[argu2];
+          // a += 1 : a = a + 1과 같음
+        }
+        return _argu;
+      }
+      document.write("Total : "+argu(10,20,30,40));
 
-        document.write("<br>", "<br>", "-----지역변수-----", "<br>");
-        function local_var() {
-          var i = 0;
-          // 여기서 var를 지워버리면 지역변수가 아닌 전역변수로 변경됨
-          // 결국 전역변수로써의 i = 0이 돼버리기 때문에 i를 0으로 무한으로 변경하며 에러
-        }
-        for(var i = 0; i < 10; i++) {
-          local_var();
-          document.write(i);
-        }
+      document.write("<br>", "<br>", "-----매개변수의 수 (function length)-----", "<br>");
+      function zero_fl() {
+        document.write (
+          "zero_fl.length : ", zero_fl.length,
+          " / arguments.length : ", arguments.length, "<br>"
+        );
+      }
+      zero_fl("arg_2", "arg_3");
 
-        document.write("<br>", "<br>", "-----전역변수-----", "<br>");
-        (function (){
-          var MYAPP = {} // 전역변수 (함수에 소속되면서 지역변수로 변경)
-          MYAPP.calculator = {
-            "left" : null,
-            "right" : null
-          }
-          MYAPP.codrdinate = {
-            "left" : null,
-            "right" : null
-          }
-          MYAPP.calculator.left = 30;
-          MYAPP.calculator.right = 80;
-          function sum() {
-            return MYAPP.calculator.left + MYAPP.calculator.right;
-          }
-          document.write(sum());
-        }()); // function을 전부 ()로 묶으면 익명함수가 되고, 별도의 출력코드없이 바로 출력됨
+      function one_fl(arg_1) {
+        document.write (
+          "one_fl.length : ", one_fl.length,
+          // 함수 자체의 매개변수인 function one_fl(arg_1)의 수 - 1
+          " / arguments.length : ", arguments.length
+          // 실제 함수를 호출할 때의 인자인 one_fl("arg_2", "arg_3", "arg_4")의 수 - 3
+        );
+      }
+      one_fl("arg_2", "arg_3", "arg_4");
+    </script>
+      <br>
+      <h2>함수의 호출</h2>
+      <br>
+    <script>
+      function 호출_ex(num_1, num_2) {
+        return num_1+num_2;
+      }
+      document.write(호출_ex.apply(null, [100, 2]), "<br>");
+      // 호출_ex.apply를 통해 리턴값을 출력
 
-        document.write("<br>", "<br>", "-----정적 유효범위-----", "<br>");
-        var not_flex = 5; // 전역변수
-        function not_flex1() {
-          var not_flex = 10; // 지역변수
-          not_flex2();
+      o1 = {lvl:1, lvl2:2, lvl3:3}
+      o2 = {lvl4:11, lvl5:12, lvl6:13}
+      // o1, o2라는 배열을 담은 객체를 지정
+      function sum_lvl() {
+        var _sum_lvl = 0;
+        for(arr in this) {
+        // for in문 : 변수에 담긴 배열을 하나씩 꺼내는 역할
+          _sum_lvl += this[arr];
+          // this : 정해지지 않은 값으로, 호출할 때의 객체를 의미
+          // o1이라는 객체를 호출하게 되면 this는 o1
+          // _sum_lvl이 0부터 호출될 때마다 다음 값이랑 더해지며 리턴값이 출력
         }
-        function not_flex2() {
-          document.write(not_flex);
+        return _sum_lvl;
+      }
+      document.write(sum_lvl.apply(o1), "<br>");
+      // sum_lvl.apply(null)에서 null 값에 객체를 입력
+      document.write(sum_lvl.apply(o2));
+    </script>
+      <br>
+      <h2>객체지향 프로그래밍<br>(Object-Oriented Programming)</h2>
+      <br>
+    <script>
+      document.write("-----객체-----", "<br>");
+      var obj_fam = {
+        "name" : "son of hsh", // 객체에 담기는 변수를 프로퍼티 또는 속성이라고 부름
+        "who" : function() {
+          return "hhj is "+this.name;
         }
-        // not_flex라는 지역변수가 없기 때문에 전역변수로써 var not_flex = 5;를 출력
-        // 바로 위의 함수 지역변수인 var not_flex = 10;는 출력되지 않음
-        not_flex1(); // 결과는 전역변수인 var not_flex = 5;의 값인 5
-      </script>
-        <br>
-        <h2>값으로써의 함수와 콜백</h2>
-        <br>
-      <script>
-        document.write("-----값으로써의 함수-----", "<br>");
-        document.write("function a(){}와 var a = function(){}는 같은 것", "<br>");
-        function cal (func, num) {
-          return func(num)
-        }
-        function increase(num) {
-          return num+1
-        }
-        function decrease(num) {
-          return num-1
-        }
-        document.write(cal(increase, 1), "<br>");
-        document.write(cal(decrease, 1));
+      }
+      // obj_fam라는 객체에 "name" : "son of hsh"를 담고, "who"라는 함수도 함께 담음
+      document.write(obj_fam.who());
 
-        function cal_2(mode) {
-          var funcs = {
-            "plus" : function(left, right) {return left + right},
-            // plus를 함수로 지정
-            "minus" : function(left, right) {return left - right}
-            // minus를 함수로 지정
-          }
-          return funcs[mode];
-          // [mode]값에 plus, minus 입력으로 함수를 호출
+      document.write("<br>", "<br>", "-----생성자(Constructor)와 new-----", "<br>");
+      function new_fam() {}
+        var n_f = new new_fam();
+        // new를 앞에 입력해서 객체의 생성자(비어있는 객체) 지정
+        // == new_fam{}와 같은 빈 객체라고 보면 됨
+        n_f.name = "hhj";
+        n_f.job = function() {
+          return this.name+" is first son";
         }
-        document.write("<br>", cal_2("plus")(2, 1), "<br>");
-        document.write(cal_2("minus")(2, 1), "<br>");
+      document.write(n_f.job(), "<br>");
 
-        var process = [
-          function(input) {return input + "로 먼저 1번 process가 추가되고";},
-          // 밑에서 지정한 input 값 "이거슨 예시"가 입력
-          function(input) {return input + " 다음으로 2번 process가 추가,";},
-          // 밑의 과정을 거쳐 "이거슨 예시"와 " 다음으로 2번 process가 추가," 입력
-          function(input) {return input + "<br> 다음으로 3번 process가 출력되며 반복문 종료";}
-          // 밑의 과정을 거쳐 "이거슨 예시"와 " 다음으로 2번 process가 추가,",
-          // "<br> 다음으로 3번 process가 출력되며 반복문 종료"가 마지막으로 추가됨
-          // input_i < process.length로 인해 process의 과정이 끝남과 동시에 반복문 종료
-        ];
-        var input = "이거슨 예시";
-        for(var input_i = 0; input_i < process.length; input_i++) {
-          input = process[input_i](input);
-          // input_i는 0부터 시작해서 process의 3개의 단계가 끝날때 까지 반복이므로
-          // input_i는 0, 1, 2까지의 숫자를 갖게 됨
-          // for문에서 지정한 0, 1, 2의 값이 process[input_i]에 입력됨
+      function new_fam1(name1) {
+        this.name1 = name1;
+        this.job1 = function() {
+          return this.name1+" is han's family";
         }
-        document.write(input);
-        document.write("<br>", "<br>", "-----콜백-----", "<br>");
-        var callback_num = [1, 5, 2, 3, 4, 6, 8, 7, 10, 9]
-        var sortfunc = function(a, b) {
-          // return a - b; // 뺀 값이 양수인지, 음수인지, 0인지를 판별하게 됨
-          return b - a; // 정렬을 역수로 하기 위함
-          // console.log(a, b);
-          // if (a > b) { // 만약 a가 b보다 크다면
-          //   return 1; // 1 출력
-          // } else if (a < b) { // 또한 만약에 a가 b보다 작다면
-          //   return -1; // -1 출력
-          // } else { //그렇지 않다면 (a = b)
-          //   return 0; // 0 출력 (무시)
-          // }
-        }
-        // 위의 함수를 콜백함수라고 함
-        document.write(callback_num.sort(sortfunc));
-        console.log(callback_num.sort(sortfunc));
-        // 위에서 정한 출력값으로 인해 크기를 비교해서 -1, 0, 1의 값이 출력됨
-        // -1, 0, 1을 sort하게 되는 것
-        // document.write("<br>", "-----비동기 콜백-----", "<br>");
-      </script>
-        <br>
-        <h2>클로저 (Closure)</h2>
-        <br>
-      <script>
-        document.write("-----외부함수와 내부함수-----", "<br>");
-        function outter() {
-          function inner() {
-            var title = "Hello, Closure1"
-            document.write(title);
-          }
-          inner();
-        }
-        outter(); // 결과로는 outter는 inner라는 함수를 지닌 것
+      }
+      // 재활용이 가능한 코드 (초기화 작업 - initialize)
+      var nf1 = new new_fam1("hhj");
+      // 생성자 지정 후, 비어있는 생성자(name1)에 프로퍼티인 hhj를 추가
+      document.write(nf1.job1()+"<br>");
+      // n_f.job 함수를 통해 이름이 추가 되고 리턴값이 출력
+      var nf2 = new new_fam1("jhs");
+      document.write(nf2.job1());
 
-        document.write("<br>");
+      document.write("<br>", "<br>", "-----전역객체-----", "<br>");
+      document.write("JavaScript의 모든 객체는 기본적으로 전역객체의 프로퍼티");
+      var ㅇ = {"인사":function(){
+        document.write("<br>", "Hi~Hello");
+      }}
+      ㅇ.인사();
+      window.ㅇ.인사();
+    </script>
+      <br>
+      <h2>함수와 this</h2>
+      <br>
+    <script>
+      document.write( "<u>요약 : this는 변화무쌍하며, 어디에서 쓰이냐에 따라 this의 값이 우된다.</u>", "<br>");
+      function this_ex() {
+        if(window != this) {
+          document.write("window != this");
+        } else {
+          document.write("this는 전역객체인 window와 같음<br>window === this");
+        }
+      }
+      this_ex();
 
-        function outter2() {
-          var title2 = "Hello, Closure2"
-          return function() {
-            document.write(title2, "<br>");
+      document.write("<br>", "<br>", "-----메소드의 호출-----", "<br>");
+      var this_ex = {
+        this_func : function () { // this_func는 함수를 담고 있는 프로퍼티로 메소드
+          if(this_ex === this) { // 메소드 안에서의 this는 객체를 담은 변수 this_ex와 같음
+            document.write("메소드 안에서의 this는<br>객체를 담은 변수 this_ex와 같음<br>this_ex === this");
           }
         }
-        inner2 = outter2();
-        inner2();
-        // 완전히 종료된 외부함수도 그 안에 담겨있는 내부함수를 호출하면서
-        // 다시 출력할 수 있는 것이 클로저의 특징
+      }
+      this_ex.this_func();
 
-        function factory_movie(title3) {
-        // 밑의 사항을 전부 거쳐서 와야하기 때문에 함수가 안전하게 수정, 저장이 가능
-          return {
-            get_title : function() {
-            // 여기는 값을 가져오기 위한 경로로써의 역할
-              return title3;
-            },
-            set_title : function(_title3) {
-            // 여기가 진짜 내용 (출력값 수정은 여기서만 가능)
-              if(typeof _title3 === "string") {
-              // 문자열인지 아닌지 확인하는 if문
-                title3 = _title3
-              } else {
-                alert("제목이 문자열이 아닙니다.");
-              }
-            }
+      document.write("<br>", "<br>", "-----생성자의 호출-----", "<br>");
+      var func_this = null;
+      function func_th() {
+        func_this = this; // 변수 앞에 var가 없으므로 전역변수로써의 this를 의미(null)
+      }
+      var th1 = func_th();
+      if(func_this === window) {
+        document.write("함수 내에서의 this는 window", "<br>");
+      }
+      var th2 = new func_th();
+      if(func_this === th2) {
+        document.write("생성자에서는 this의 값이 생성될 객체를 의미");
+      }
+
+      document.write("<br>", "<br>", "-----apply와 call-----", "<br>");
+      var _ex_ = {}
+      var __ex__ = {}
+      function ___ex___() {
+        switch(this) {
+        // switch() : ()내의 어떠한 값이 들어가면 이 값과 같은 케이스 내의 코드 실행
+        // break까지 실행됨, if 문의 대체제 역할 (for와 while의 관계와 비슷)
+          case _ex_:
+            document.write("_ex_<br>");
+            break;
+          case __ex__:
+            document.write("__ex__");
+            break;
+          case window:
+            document.write("window<br>");
+            break;
+        }
+      }
+      ___ex___(); // this는 window와 같기 때문에 결과는 window
+      ___ex___.apply(_ex_); // 함수 내의 _ex_를 apply로 호출했기 때문에 this는 _ex_
+      ___ex___.apply(__ex__); // 함수 내의 __ex__를 apply로 호출했기 때문에 this는 __ex__
+    </script>
+      <br>
+      <h2>상속 (inheritance)</h2>
+      <br>
+    <script>
+      function inher_ex(name) {
+        this.name = name;
+      }
+      inher_ex.prototype.name = null,
+      // 여기서 prototype은 문법적으로 정해진 프로퍼티
+      inher_ex.prototype.who = function() {
+        return this.name+" is han's family"
+      }
+      function han_fam(name) {
+      // han_fam은 맨 위의 inher_ex를 상속, who라는 메소드가 없더라도
+      // inher_ex 상속을 통해 who라는 메소드를 호출할 수 있게 됨
+        this.name = name;
+      }
+      han_fam.prototype = new inher_ex();
+      han_fam.prototype.wel_hhj = function() {
+        return "Welcome HHJ!";
+        // han_fam에서 상속받은 것에 추가적으로 wel_hhj라는
+        // 메소드를 추가
+      }
+      var ex_1 = new han_fam("hhj");
+      // 결론 : inher_ex에게 상속(who)받은 han_fam에게 상속(wel_hhj)받은 wel_hhj
+      // 결과적으로는 prototype 객체를 생성하기 위해 inher_ex라는
+      // 생성자를 만들었다고 봐야함
+      document.write(ex_1.who()+"<br>");
+      document.write(ex_1.wel_hhj());
+    </script>
+      <br>
+      <h2>Prototype (객체의 원형)</h2>
+      <br>
+    <script>
+      document.write("좋은 건 prototype을 통해 물려줘야함", "<br>");
+      function Ultra() {}
+        Ultra.prototype.ultraProp = true;
+      function Super() {} // Super는 Ultra의 자식
+        Super.prototype = new Ultra();
+      function Sub() {} // Sub는 Ultra의 자식
+        Sub.prototype = new Super();
+      var Power = new Sub();
+      document.write(Power.ultraProp);
+      // Sub가 부모, 조부모를 통해 받은 ultraProp을 출력
+      // Ultra가 Super에게 상속한 ultraProp을 Sub에게 상속하고 그 값을 Power라는 변수가 출력
+
+      document.write("<br>");
+
+      function Ultra1() {}
+        Ultra1.prototype.ultraProp1 = true;
+      function Super1() {}
+        Super1.prototype = new Ultra1();
+      function Sub1() {}
+        Sub1.prototype = new Super1();
+      var Power1 = new Sub1();
+      Power1.ultraProp1 = "Power1이라는 변수가 ultraProp1을 갖고 있음";
+      document.write(Power1.ultraProp1);
+
+      document.write("<br>");
+
+      function Ultra2() {}
+        Ultra2.prototype.ultraProp2 = true;
+      function Super2() {}
+        Super2.prototype = new Ultra2();
+      function Sub2() {}
+        Sub2.prototype = new Super2();
+        Sub2.prototype.ultraProp2 = "Sub2가 ultraProp2를 갖고 있음";
+      var Power2 = new Sub2();
+      document.write(Power2.ultraProp2);
+
+      document.write("<br>");
+
+      function Ultra3() {}
+        Ultra3.prototype.ultraProp3 = true;
+      function Super3() {}
+        var _super3 = new Ultra3();
+        _super3.ultraProp3 = "_super3라는 변수를 만들어서 ultraProp3의 값을 지정하고 갖고 있음";
+        Super3.prototype = _super3;
+      function Sub3() {}
+        Sub3.prototype = new Super3();
+      var Power3 = new Sub3();
+      document.write(Power3.ultraProp3);
+    </script>
+      <br>
+      <h2>표준 내장 객체</h2>
+      <br>
+    <script>
+      document.write("<u>JavaScript의 내장 객체</u><br>Object (객체)<br>Function (함수)<br>Array (배열)<br>String (문자열)<br>Boolean (참, 거짓)<br>Number (숫자)<br>Math (계산)<br>Date (날짜)<br>RegEXP (정규 표현식)");
+
+      document.write("<br>", "<br>", "-----배열의 확장-----", "<br>");
+      var num_lotto = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45");
+      function lottoMachine(num_lotto) {
+        var index = Math.floor(num_lotto.length*Math.random());
+        // index 값인 0~1까지의 랜덤한 소숫점 숫자를 Math.random을 실행해서 랜덤값을 출력
+        // 최소값 0, 최대값 9까지의 범위 지정을 위해 num_lotto.length로 index값을 숫자로 지정
+        // num_lotto.length와 Math.random를 곱해서 Math.floor로 소숫점을 버림
+        // 소숫점을 버리고 만들어진 0~9까지의 정수를 출력함으로써 랜덤한 값 추출
+        return num_lotto[index];
+        // 랜덥하게 얻은 임의의 index 값을 배열에 지정
+       }
+       document.write(lottoMachine(num_lotto), "<br>");
+
+      Array.prototype.lotto = function() {
+        // lotto라는 메소드가 Array라는 배열에 소속됨
+        var index = Math.floor(this.length*Math.random());
+        // 여기서의 this는 new Array라는 객체를 의미
+        return this[index];
+      }
+      var num_lotto = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45");
+      document.write(num_lotto.lotto());
+    </script>
+      <br>
+      <h2>Object (Object.xxx)</h2>
+      <br>
+    <script>
+      document.write("-----Object.keys()-----", "<br>");
+      var keys_arr = ["a", "b", "c"]
+      document.write("Object.keys(keys_arr) → ", Object.keys(keys_arr), " (생략된 key 값)");
+      var keys_arr2 = {"key":"a", "값만을":"b", "뽑아줌":"c"}
+      document.write("<br>", "Object.keys(keys_arr) → ",  Object.keys(keys_arr2), "<br>");
+      document.write("Object.keys()처럼 prototype이 없는 경우,<br>배열을 변수에 담아 인자로 지정,<br>출력 시에 Object.keys(인자)의 문법으로 사용해야 함<br>(인자 설정 : var 인자 = [\"a\", \"b\", \"c\"] / 출력 : Object.keys(인자))");
+
+      document.write("<br>", "<br>", "-----Object.prototype.toString()-----", "<br>");
+      document.write("Object.prototype.toString()처럼 prototype이 붙은 경우,<br>new Array와 같은 생성자를 변수에 담고(var o = new Array),<br>출력 시에는 o.toString()의 문법으로 사용해야 함");
+
+      document.write("<br>", "<br>", "-----Object의 확장-----", "<br>");
+      Object.prototype.contain = function(contain_ex) {
+        for(var name in this) {
+          if(this[name] === contain_ex) {
+            return true; // 입력한 인자값이 존재하는 경우
           }
         }
-        // set_title에서 _title3는 title3과 같이 때문에 get_title의 return title3를 호출
-        // get_title의 title은 외부함수인 factory_movie(title3) 값을 리턴하고 있기때문에
-        // 결과적으로 factory_movie(title3)의 title3를 화면에 출력함
-        matrix = factory_movie("Matrix");
-        world = factory_movie("New World");
+        return false; // 입력한 인자값을 존재하지 않는 경우
+      }
+      var contain_ex1 = {"name" : "hhj1", "job" : "son"}
+      document.write(contain_ex1.contain("hhj1"), "<br>");
+      // hhj라는 인자가 객체에 있는지 없는지 true, false
+      var contain_ex2 = ["hsh", "jhs", "hhj1", "hhj2"]
+      document.write(contain_ex2.contain("kws"));
+      // hsh가 배열이 있는지 없는지 true, false
 
-        document.write(matrix.get_title(), "<br>");
-        document.write(world.get_title(), "<br>");
+      document.write("<br>", "<br>", "-----Object의 확장의 위험-----", "<br>");
+      document.write("<u>"+"contain_ex2에 대한 데이터 뿐만이 아닌<br>↓ 모든 객체에 영향을 미치게 돼서 이러한 결과 도출 ↓"+"</u>", "<br>")
+      for(var name in contain_ex2) {
+        document.write(contain_ex2[name]);
+      }
 
-        world.set_title("신세계", "<br>");
-        document.write(matrix.get_title(), "<br>");
-        document.write(world.get_title());
-      </script>
-        <br>
-        <h2>인자 (arguments)</h2>
-        <br>
-      <script>
-        function argu() {
-          var _argu = 0;
-          for (var argu2 = 0; argu2 < arguments.length; argu2++) {
-          // arguments.length : argu에 들어간 인자의 수
-            document.write(argu2+" : "+arguments[argu2]+"<br>");
-            // arguments[argu2] : argu2의 수에 따라 arue의 인자값을 출력
-            // 결과적으로 argu2는 0~4, +arguments[argu2]는 10~40
-            _argu += arguments[argu2];
-            // a += 1 : a = a + 1과 같음
-          }
-          return _argu;
+      document.write("<br>", "<br>", "<u>"+"if(contain_ex2.hasOwnProperty)을 통해contain_ex2<br>↓ 자기 자신만의 인자값만을 결과로 도출시켜야 함 ↓"+"</u>", "<br>")
+
+      for(var name in contain_ex2) {
+        if(contain_ex2.hasOwnProperty(name)) {
+          document.write(contain_ex2[name]);
         }
-        document.write("Total : "+argu(10,20,30,40));
+      }
+    </script>
+      <br>
+      <h2>데이터 타입</h2>
+      <br>
+    <script>
+      document.write("-----원시(기본) 데이터 타입-----", "<br>");
+      document.write("<u>Number (숫자)</u><br><u>String (문자열)</u><br><u>Boolean (참, 거짓)</u><br><u>null</u><br><u>undefined</u><br><u>객체가 아닌 데이터 타입</u>");
 
-        document.write("<br>", "<br>", "-----매개변수의 수 (function length)-----", "<br>");
-        function zero_fl() {
-          document.write (
-            "zero_fl.length : ", zero_fl.length,
-            " / arguments.length : ", arguments.length, "<br>"
-          );
-        }
-        zero_fl("arg_2", "arg_3");
+      document.write("<br>", "<br>", "-----객체(참조) 데이터 타입-----", "<br>");
+      document.write("<u>원시 데이터 타입이 아닌 데이터 타입</u>");
 
-        function one_fl(arg_1) {
-          document.write (
-            "one_fl.length : ", one_fl.length,
-            // 함수 자체의 매개변수인 function one_fl(arg_1)의 수 - 1
-            " / arguments.length : ", arguments.length
-            // 실제 함수를 호출할 때의 인자인 one_fl("arg_2", "arg_3", "arg_4")의 수 - 3
-          );
-        }
-        one_fl("arg_2", "arg_3", "arg_4");
-      </script>
-        <br>
-        <h2>함수의 호출</h2>
-        <br>
-      <script>
-        function 호출_ex(num_1, num_2) {
-          return num_1+num_2;
-        }
-        document.write(호출_ex.apply(null, [100, 2]), "<br>");
-        // 호출_ex.apply를 통해 리턴값을 출력
+      document.write("<br>", "<br>", "-----레퍼 객체 (Wrapper Object)-----", "<br>");
+      var str = "Hello, World";
+      // 이 사이에 str = new String("Hello, World");라는 생성자를 만드는 것과 같음
+      document.write("↓ <u>. 은 객체 접근 변산자 (Object Access Operator)</u> ↓", "<br>");
+      document.write(str.length, "<br>");
+      document.write(str.charAt(1), "<br>");
+      str.prop = "I'm WEB";
+      document.write("↓ <u>str이라는 원시 데이터 타입을 객체처럼 사용하게 되면 문제가 생김</u> ↓", "<br>");
+      document.write(str.prop);
+    </script>
+      <br>
+      <h2>복제 & 참조</h2>
+      <br>
+    <script>
+      document.write("-----복제-----", "<br>");
+      document.write("<u>복사를 한 후, 복사값 또는 원본값을 수정한다고 해서</u><br>↓ <u>다른 값이 변하지 않는 원리</u> ↓", "<br>");
+    </script>
+      <img src="copy_ex.png">
+      <br>
+    <script>
+      var copy_1 = "copy_2 = copy_1";
+      var copy_2 = copy_1;
+      copy_2 = "copy_2 = 다른 값";
+      document.write(copy_1, "<br>");
+      document.write(copy_2);
 
-        o1 = {lvl:1, lvl2:2, lvl3:3}
-        o2 = {lvl4:11, lvl5:12, lvl6:13}
-        // o1, o2라는 배열을 담은 객체를 지정
-        function sum_lvl() {
-          var _sum_lvl = 0;
-          for(arr in this) {
-          // for in문 : 변수에 담긴 배열을 하나씩 꺼내는 역할
-            _sum_lvl += this[arr];
-            // this : 정해지지 않은 값으로, 호출할 때의 객체를 의미
-            // o1이라는 객체를 호출하게 되면 this는 o1
-            // _sum_lvl이 0부터 호출될 때마다 다음 값이랑 더해지며 리턴값이 출력
-          }
-          return _sum_lvl;
-        }
-        document.write(sum_lvl.apply(o1), "<br>");
-        // sum_lvl.apply(null)에서 null 값에 객체를 입력
-        document.write(sum_lvl.apply(o2));
-      </script>
-        <br>
-        <h2>객체지향 프로그래밍<br>(Object-Oriented Programming)</h2>
-        <br>
-      <script>
-        document.write("-----객체-----", "<br>");
-        var obj_fam = {
-          "name" : "son of hsh", // 객체에 담기는 변수를 프로퍼티 또는 속성이라고 부름
-          "who" : function() {
-            return "hhj is "+this.name;
-          }
-        }
-        // obj_fam라는 객체에 "name" : "son of hsh"를 담고, "who"라는 함수도 함께 담음
-        document.write(obj_fam.who());
+      document.write("<br>", "<br>", "-----참조-----", "<br>");
+      document.write("<u>refer_2의 프로퍼티 값인 .id를 변경하면, refer_1의</u><br>↓ <u>프로퍼티 값인 refer_1.id도 refer_2의 프로퍼티 값으로 변경됨</u> ↓<br>");
+    </script>
+      <img src="reference_ex.png">
+      <br>
+    <script>
+      var refer_1 = {"id":"refer_1 값"};
+      var refer_2 = refer_1;
+      refer_2.id = "refer_2의 id 값을 변경";
+      document.write(refer_1.id);
 
-        document.write("<br>", "<br>", "-----생성자(Constructor)와 new-----", "<br>");
-        function new_fam() {}
-          var n_f = new new_fam();
-          // new를 앞에 입력해서 객체의 생성자(비어있는 객체) 지정
-          // == new_fam{}와 같은 빈 객체라고 보면 됨
-          n_f.name = "hhj";
-          n_f.job = function() {
-            return this.name+" is first son";
-          }
-        document.write(n_f.job(), "<br>");
+      document.write("<br>", "<br>", "-----주의점-----", "<br>");
+      var refer_3 = {"id":"refer_3 값"};
+      var refer_4 = refer_3;
+      refer_4 = {"id":"refer_4의 id 값을 다른 것으로 변경"}
+      document.write("<u>프로퍼티에 해당하는 id를 바꾼다고 해도 refer_4에</u><br><u>따로 id 값을 할당하게 되면 복제와 같은 원리로</u><br>↓ <u>원래의 refer_3의 id 값이 출력</u> ↓", "<br>");
+      document.write(refer_3.id);
+      // 위의 코드는 참조가 아닌 복제의 코드임
 
-        function new_fam1(name1) {
-          this.name1 = name1;
-          this.job1 = function() {
-            return this.name1+" is han's family";
-          }
-        }
-        // 재활용이 가능한 코드 (초기화 작업 - initialize)
-        var nf1 = new new_fam1("hhj");
-        // 생성자 지정 후, 비어있는 생성자(name1)에 프로퍼티인 hhj를 추가
-        document.write(nf1.job1()+"<br>");
-        // n_f.job 함수를 통해 이름이 추가 되고 리턴값이 출력
-        var nf2 = new new_fam1("jhs");
-        document.write(nf2.job1());
+      document.write("<br>", "<br>", "-----복제 & 참조에서의 함수-----", "<br>");
+      var h = 1; // h = 1;
+      function func(j) {
+        j = 2; // j = 2;
+      }
+      func(h); // j = h;
+      document.write(h, "<br>");
+      // 결과적으로 복제의 예제
+      // h = 1;
+      // j = h;
+      // j = 2;
 
-        document.write("<br>", "<br>", "-----전역객체-----", "<br>");
-        document.write("JavaScript의 모든 객체는 기본적으로 전역객체의 프로퍼티");
-        var ㅇ = {"인사":function(){
-          document.write("<br>", "Hi~Hello");
-        }}
-        ㅇ.인사();
-        window.ㅇ.인사();
-      </script>
-        <br>
-        <h2>함수와 this</h2>
-        <br>
-      <script>
-        document.write( "<u>요약 : this는 변화무쌍하며, 어디에서 쓰이냐에 따라 this의 값이 좌우된다.</u>", "<br>");
-        function this_ex() {
-          if(window != this) {
-            document.write("window != this");
-          } else {
-            document.write("this는 전역객체인 window와 같음<br>window === this");
-          }
-        }
-        this_ex();
+      var h1 = {"id":3}; // h1 = {"id":3};
+      function func1(j1) {
+        j1 = {"id":4}; // j1 = {"id":4};
+      }
+      func1(h1); // j1 = h1;
+      document.write(h1.id, "<br>");
+      // 결과적으로 복제의 예제
+      // h1 = {"id":3};
+      // j1 = h1;
+      // j1 = {"id":4};
 
-        document.write("<br>", "<br>", "-----메소드의 호출-----", "<br>");
-        var this_ex = {
-          this_func : function () { // this_func는 함수를 담고 있는 프로퍼티로 메소드
-            if(this_ex === this) { // 메소드 안에서의 this는 객체를 담은 변수 this_ex와 같음
-              document.write("메소드 안에서의 this는<br>객체를 담은 변수 this_ex와 같음<br>this_ex === this");
-            }
-          }
-        }
-        this_ex.this_func();
-
-        document.write("<br>", "<br>", "-----생성자의 호출-----", "<br>");
-        var func_this = null;
-        function func_th() {
-          func_this = this; // 변수 앞에 var가 없으므로 전역변수로써의 this를 의미(null)
-        }
-        var th1 = func_th();
-        if(func_this === window) {
-          document.write("함수 내에서의 this는 window", "<br>");
-        }
-        var th2 = new func_th();
-        if(func_this === th2) {
-          document.write("생성자에서는 this의 값이 생성될 객체를 의미");
-        }
-
-        document.write("<br>", "<br>", "-----apply와 call-----", "<br>");
-        var _ex_ = {}
-        var __ex__ = {}
-        function ___ex___() {
-          switch(this) {
-          // switch() : ()내의 어떠한 값이 들어가면 이 값과 같은 케이스 내의 코드 실행
-          // break까지 실행됨, if 문의 대체제 역할 (for와 while의 관계와 비슷)
-            case _ex_:
-              document.write("_ex_<br>");
-              break;
-            case __ex__:
-              document.write("__ex__");
-              break;
-            case window:
-              document.write("window<br>");
-              break;
-          }
-        }
-        ___ex___(); // this는 window와 같기 때문에 결과는 window
-        ___ex___.apply(_ex_); // 함수 내의 _ex_를 apply로 호출했기 때문에 this는 _ex_
-        ___ex___.apply(__ex__); // 함수 내의 __ex__를 apply로 호출했기 때문에 this는 __ex__
-      </script>
-        <br>
-        <h2>상속 (inheritance)</h2>
-        <br>
-      <script>
-        function inher_ex(name) {
-          this.name = name;
-        }
-        inher_ex.prototype.name = null,
-        // 여기서 prototype은 문법적으로 정해진 프로퍼티
-        inher_ex.prototype.who = function() {
-          return this.name+" is han's family"
-        }
-        function han_fam(name) {
-        // han_fam은 맨 위의 inher_ex를 상속, who라는 메소드가 없더라도
-        // inher_ex 상속을 통해 who라는 메소드를 호출할 수 있게 됨
-          this.name = name;
-        }
-        han_fam.prototype = new inher_ex();
-        han_fam.prototype.wel_hhj = function() {
-          return "Welcome HHJ!";
-          // han_fam에서 상속받은 것에 추가적으로 wel_hhj라는
-          // 메소드를 추가
-        }
-        var ex_1 = new han_fam("hhj");
-        // 결론 : inher_ex에게 상속(who)받은 han_fam에게 상속(wel_hhj)받은 wel_hhj
-        // 결과적으로는 prototype 객체를 생성하기 위해 inher_ex라는
-        // 생성자를 만들었다고 봐야함
-        document.write(ex_1.who()+"<br>");
-        document.write(ex_1.wel_hhj());
-      </script>
-        <br>
-        <h2>Prototype (객체의 원형)</h2>
-        <br>
-      <script>
-        document.write("좋은 건 prototype을 통해 물려줘야함", "<br>");
-        function Ultra() {}
-          Ultra.prototype.ultraProp = true;
-        function Super() {} // Super는 Ultra의 자식
-          Super.prototype = new Ultra();
-        function Sub() {} // Sub는 Ultra의 자식
-          Sub.prototype = new Super();
-        var Power = new Sub();
-        document.write(Power.ultraProp);
-        // Sub가 부모, 조부모를 통해 받은 ultraProp을 출력
-        // Ultra가 Super에게 상속한 ultraProp을 Sub에게 상속하고 그 값을 Power라는 변수가 출력
-
-        document.write("<br>");
-
-        function Ultra1() {}
-          Ultra1.prototype.ultraProp1 = true;
-        function Super1() {}
-          Super1.prototype = new Ultra1();
-        function Sub1() {}
-          Sub1.prototype = new Super1();
-        var Power1 = new Sub1();
-        Power1.ultraProp1 = "Power1이라는 변수가 ultraProp1을 갖고 있음";
-        document.write(Power1.ultraProp1);
-
-        document.write("<br>");
-
-        function Ultra2() {}
-          Ultra2.prototype.ultraProp2 = true;
-        function Super2() {}
-          Super2.prototype = new Ultra2();
-        function Sub2() {}
-          Sub2.prototype = new Super2();
-          Sub2.prototype.ultraProp2 = "Sub2가 ultraProp2를 갖고 있음";
-        var Power2 = new Sub2();
-        document.write(Power2.ultraProp2);
-
-        document.write("<br>");
-
-        function Ultra3() {}
-          Ultra3.prototype.ultraProp3 = true;
-        function Super3() {}
-          var _super3 = new Ultra3();
-          _super3.ultraProp3 = "_super3라는 변수를 만들어서 ultraProp3의 값을 지정하고 갖고 있음";
-          Super3.prototype = _super3;
-        function Sub3() {}
-          Sub3.prototype = new Super3();
-        var Power3 = new Sub3();
-        document.write(Power3.ultraProp3);
-      </script>
-        <br>
-        <h2>표준 내장 객체</h2>
-        <br>
-      <script>
-        document.write("<u>JavaScript의 내장 객체</u><br>Object (객체)<br>Function (함수)<br>Array (배열)<br>String (문자)<br>Boolean (참, 거짓)<br>Number (숫자)<br>Math (계산)<br>Date (날짜)<br>RegEXP (정규 표현식)");
-
-        document.write("<br>", "<br>", "-----배열의 확장-----", "<br>");
-        var num_lotto = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45");
-        function lottoMachine(num_lotto) {
-          var index = Math.floor(num_lotto.length*Math.random());
-          // index 값인 0~1까지의 랜덤한 소숫점 숫자를 Math.random을 실행해서 랜덤값을 출력
-          // 최소값 0, 최대값 9까지의 범위 지정을 위해 num_lotto.length로 index값을 숫자로 지정
-          // num_lotto.length와 Math.random를 곱해서 Math.floor로 소숫점을 버림
-          // 소숫점을 버리고 만들어진 0~9까지의 정수를 출력함으로써 랜덤한 값 추출
-          return num_lotto[index];
-          // 랜덥하게 얻은 임의의 index 값을 배열에 지정
-         }
-         document.write(lottoMachine(num_lotto), "<br>");
-
-        Array.prototype.lotto = function() {
-          // lotto라는 메소드가 Array라는 배열에 소속됨
-          var index = Math.floor(this.length*Math.random());
-          // 여기서의 this는 new Array라는 객체를 의미
-          return this[index];
-        }
-        var num_lotto = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45");
-        document.write(num_lotto.lotto());
-      </script>
-        <br>
-        <h2>Object (Object.xxx)</h2>
-        <br>
-      <script>
-        document.write("-----Object.keys()-----", "<br>");
-        var keys_arr = ["a", "b", "c"]
-        document.write("Object.keys(keys_arr) → ", Object.keys(keys_arr), " (생략된 key 값)");
-        var keys_arr2 = {"key":"a", "값만을":"b", "뽑아줌":"c"}
-        document.write("<br>", "Object.keys(keys_arr) → ",  Object.keys(keys_arr2), "<br>");
-        document.write("Object.keys()처럼 prototype이 없는 경우,<br>배열을 변수에 담아 인자로 지정,<br>출력 시에 Object.keys(인자)의 문법으로 사용해야 함<br>(인자 설정 : var 인자 = [\"a\", \"b\", \"c\"] / 출력 : Object.keys(인자))");
-
-        document.write("<br>", "<br>", "-----Object.prototype.toString()-----", "<br>");
-        document.write("Object.prototype.toString()처럼 prototype이 붙은 경우,<br>new Array와 같은 생성자를 변수에 담고(var o = new Array),<br>출력 시에는 o.toString()의 문법으로 사용해야 함");
-      </script>
+      var h2 = {"id":5}; // h2 = {"id":5};
+      function func2(j2) {
+        j2.id = 6; // j2.id = 6;
+      }
+      func2(h2); // j2 = h2;
+      document.write(h2.id);
+      // 결과적으로 참조의 예제
+      // h2 = {"id":5};
+      // j2 = h2;
+      // j2.id = 6;
+    </script>
   </body>
 </html>

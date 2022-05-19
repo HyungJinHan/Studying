@@ -8,5 +8,6 @@
 - 유용한 링크 모음 : 자주 사용되는 사이트 모음
 - To Do List : 간단한 계획 WEB 페이지 / V1의 경우 localStorage 적용
 - (추가) To Do List : 계획을 끝내고 Done을 누를 시, confirm 창 구현 (취소 시, return)
-- (수정 & 추가) 글씨체 수정 및 로또 번호 생성기 
+- (수정 & 추가) 글씨체 수정 및 로또 번호 생성기 추가
+- (추가) Color Scripter를 활용한 Java 연습장 추가
 - [코딩 연습장 바로가기](https://hyungjinhan.github.io/Study-Coding-Memo/index.html)

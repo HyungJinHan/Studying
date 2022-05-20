@@ -1,5 +1,5 @@
 
-public class AccountArrayApp {
+public class AccountArrayLoopApp {
 
 	public static void main(String[] args) {
 		
@@ -15,17 +15,6 @@ public class AccountArrayApp {
 		double expense = valueOfSupply*expenseRate; // Expense 가격계산 변수
 		double income = valueOfSupply-expense; // Income 가격계산 변수
 		
-		double[] dividendRates = new double[3];
-		// double 데이터타입으로 이루어진 값을 [3]개 담는 배열
-		dividendRates[0] = 0.5;
-		dividendRates[1] = 0.3;
-		dividendRates[2] = 0.2;
-		// 3개의 double 데이터를 배열에 지정
-		
-		double dividend1 = (income)*dividendRates[0];
-		double dividend2 = (income)*dividendRates[1];
-		double dividend3 = (income)*dividendRates[2];
-		
 		System.out.println("Value of supply : "+valueOfSupply);
 		// 공급가 설정
 		System.out.println("VAT : "+vat);
@@ -36,10 +25,23 @@ public class AccountArrayApp {
 		// 소비
 		System.out.println("Income : "+income);
 		// 순수익
-		System.out.println("Dividend (50%) : "+dividend1);		
-		System.out.println("Dividend (30%) : "+dividend2);		
-		System.out.println("Dividend (20%) : "+dividend3);
-		// 배당 5:3:2
+		
+		double[] dividendRates = new double[4];
+		// double 데이터타입으로 이루어진 값을 [3]개 담는 배열
+		dividendRates[0] = 0.5;
+		dividendRates[1] = 0.2;
+		dividendRates[2] = 0.2;
+		dividendRates[3] = 0.1;
+		// 3개의 double 데이터를 배열에 지정
+		
+		int i = 0;
+		while(i < dividendRates.length) {
+			// 변수로 정한 i가 dividendRates의 수보다 작을 때, 반복문 종료
+			System.out.println("Dividend : "+(income*dividendRates[i]));
+			// income*dividendRates[i]를 통해 i값에 해당하는 배당율을 income과 곱해서 출력
+			i = i + 1;
+			// i의 값은 1씩 더해짐
+		}
 		
 	}
 
@@ -51,6 +53,7 @@ public class AccountArrayApp {
 // Total : 1100000.0
 // Expense : 300000.0
 // Income : 700000.0
-// Dividend (50%) : 350000.0
-// Dividend (30%) : 210000.0
-// Dividend (20%) : 140000.0
+// Dividend : 350000.0
+// Dividend : 140000.0
+// Dividend : 140000.0
+// Dividend : 70000.0

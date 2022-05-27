@@ -16,6 +16,13 @@ document.querySelector("#login_btn").addEventListener("click", () => {
   }
 });
 
+document.addEventListener("keydown", function(event) {
+  if(event.keyCode === 13) {
+    event.preventDefault();
+      document.querySelector("#login_btn").click();
+  }
+});
+
 document.querySelector("#ToDoList").addEventListener("click", () => {
   const id = "hhj";
   const password = "hhj";
@@ -23,7 +30,7 @@ document.querySelector("#ToDoList").addEventListener("click", () => {
   if(id == document.querySelector("#ID").value) {
     if(password == document.querySelector("#PW").value) {
       alert("To Do List로 이동합니다.");
-      window.open("연습장/To Do List/ToDoList.html");
+      location.href = "연습장/To Do List/ToDoList.html";
     }
     else {
       alert("비밀번호가 맞지 않습니다.");

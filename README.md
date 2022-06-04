@@ -1,1 +1,1 @@
-# Study-C-C--going-
+# Study-C-going-

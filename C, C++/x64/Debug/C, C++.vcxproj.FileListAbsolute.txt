@@ -1,0 +1,1 @@
+C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs\연습장\C, C++\x64\Debug\C, C++.exe

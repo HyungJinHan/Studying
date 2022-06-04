@@ -1,3 +1,4 @@
-﻿  ex0.cpp
-C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs\연습장\C_C++\ex0.cpp(1,1): warning C4828: 파일에 0x24a 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 949).
+﻿  ex2.cpp
+C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs\연습장\C_C++\ex2.cpp(19,16): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs\연습장\C_C++\ex2.cpp(20,17): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
   C_C++.vcxproj -> C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs\연습장\C_C++\x64\Debug\C_C++.exe

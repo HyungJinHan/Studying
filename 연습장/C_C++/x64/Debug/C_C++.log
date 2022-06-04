@@ -1,0 +1,4 @@
+﻿  ex2.cpp
+C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs\연습장\C_C++\ex2.cpp(19,16): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs\연습장\C_C++\ex2.cpp(20,17): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  C_C++.vcxproj -> C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs\연습장\C_C++\x64\Debug\C_C++.exe

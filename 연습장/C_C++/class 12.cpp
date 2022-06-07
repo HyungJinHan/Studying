@@ -36,4 +36,24 @@ int main() {
 	else {
 		printf("\n입력한 n(%d)은 음수입니다.\n", n);
 	}
+
+	int a, b, c;
+	printf("\n숫자 a를 입력하세요. >> ");
+	scanf_s("%d", &a);
+	printf("\n숫자 b를 입력하세요. >> ");
+	scanf_s("%d", &b);
+	printf("\n숫자 c를 입력하세요. >> ");
+	scanf_s("%d", &c);
+
+	// if 중첩 및 중괄호 생략
+	if (a > b) {
+		if (a > c)
+			printf("\na(%d)가 가장 큽니다.\n", a); // a > c
+		else
+			printf("\nc(%d)가 가장 큽니다.\n", c); // c > a
+	}
+	else if (b > c)
+		printf("\nb(%d)가 가장 큽니다.\n", b); // b > c
+	else
+		printf("\nc(%d)가 가장 큽니다.\n", c); // c > b
 }

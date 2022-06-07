@@ -15,16 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ex1.cpp">
+    <ClCompile Include="class 4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex0.cpp">
+    <ClCompile Include="class 3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex2.cpp">
+    <ClCompile Include="class 5.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex3.cpp">
+    <ClCompile Include="class 6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="class 7.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="class 8.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="class 9 (1 end).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="class 10.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="class 11.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="class 12.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

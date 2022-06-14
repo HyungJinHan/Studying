@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <title>끄적끄적 - Welcome</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="공통스타일.css?after">
+</head>
+<body>
+  <input id="day_night" type="button" value="야간 모드" onclick="
+    var target = document.querySelector('body')
+    if (this.value === '야간 모드'){
+      target.style.backgroundColor = '#424242';
+      target.style.color = 'white';
+      document.querySelector('#day_night').value = '주간 모드';
+      document.querySelector('a').style.color = 'white';
+      document.querySelector('h2').style.color = 'white';
+      document.querySelector('#grid').style.color = 'white';
+      document.querySelector('ol').style.color = 'white';
+      document.querySelector('.plan').style.color = 'white';
+      document.querySelector('.mine').style.color = 'white';
+      document.querySelector('.thing').style.color = 'white';
+      document.querySelector('.memo').style.color = 'white';
+      document.querySelector('.link').style.color = 'yellow';
+      document.querySelector('.active').style.color = '#2E2E2E';
+      document.querySelector('.active').style.backgroundColor = 'white';
+      document.querySelector('.active').style.paddingLeft = '5px';
+      document.querySelector('.active').style.paddingRight = '5px';
+      document.querySelector('#disqus_thread').style.backgroundColor = '#D8D8D8';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      document.querySelector('#day_night').value = '야간 모드';
+      document.querySelector('a').style.color = 'black';
+      document.querySelector('h2').style.color = 'black';
+      document.querySelector('#grid').style.color = 'black';
+      document.querySelector('ol').style.color = 'black';
+      document.querySelector('.plan').style.color = 'black';
+      document.querySelector('.mine').style.color = 'black';
+      document.querySelector('.thing').style.color = 'black';
+      document.querySelector('.memo').style.color = 'black';
+      document.querySelector('.link').style.color = '#FF4000';
+      document.querySelector('.active').style.color = 'white';
+      document.querySelector('.active').style.backgroundColor = '#424242';
+      document.querySelector('.active').style.paddingLeft = '5px';
+      document.querySelector('.active').style.paddingRight = '5px';
+      document.querySelector('#disqus_thread').style.backgroundColor = 'white';
+    }
+    ">
+  <h1><a href="index.html" title="메인으로 이동">끄적끄적</a></h1>
+    <div id="grid">
+      <ol>
+        <h2><b><li><a href="1. 우선적인 계획.html" class="plan">우선적인 계획</a></li><br>
+        <li><a href="2. 나만의 커리큘럼.html" class="mine">나만의 커리큘럼</a></li><br>
+        <li><a href="3. 학원 커리큘럼.html" class="active">학원 커리큘럼</a></li><br>
+        <li><a href="4. 알아두면 유용한 것.html" class="thing">알아두면 유용한 것</a></li><br>
+        <li><a href="https://opentutorials.org/course/1" target="_blank" title="생활코딩 사이트로 이동" class="link">
+        생활코딩 보러가기</a></b></li></h2>
+      </ol>
+        <div>
+          <div id="pic">
+            <br><img src="학원.jpg" width="50%">
+          </div>
+          <p>01~04주차 : <b><u>Java, Python, DB</u></b> (언어) / <b><u>교육 중 1회 자격증 특강</u></b><br><br>
+          05~05주차 : <b><u>Java / Database</u> (프로젝트)</b><br><br>
+          06~08주차 : <b><u>Crawling / Python Lib / 머신러닝 / SNS데이터 텍스트마이닝 / Kaggle</u> 데이터 수집 및 분석</b><br><br>
+          08~10주차 : <b><u>HTML / CSS / JavaScript / Jquey</u></b> (Front-end)<br>
+          <br>&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b><u>Java언어를 통한 서버 개발, JSP / Servlet</u></b> (Back-end)<br><br>
+          10~12주차 : <b><u>Front-end + Back-end(JSP/Servlet) + Crawling + 머신러닝</u></b> (프로젝트)<br><br>
+          13~16주차 : <b><u>딥러닝 / 자연어 / 영상, 음성처리</u></b> 실전 / 실무교육<br><br>
+          17~18주차 : <b><u>JSP / Servlet 교육</u></b> (MyBatis, Spring, Maven)<br><br>
+          19~19주차 : <b><u>Linux / Hadoop</u></b> 교육<br><br>
+          15~23주차 : <b><u>취업역량강화</u></b> (이력서, 자소서, 면접, 포트폴리오)<br><br>
+          20~23주차 : <b><u>Spring + 딥러닝 + Hadoop</u></b> (프로젝트)</p>
+        </div>
+    </div>
+    <p><div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ggujeok.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6266c7537b967b11798c6bfe/1g1gnl7vu';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  </body>
+  </html>

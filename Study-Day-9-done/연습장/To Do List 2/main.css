@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap'); */
+
+body{
+  text-align: center;
+  margin: 0;
+  color: #FFFFFF;
+  background-color: #424242;
+  font-size: 20px;
+  font-family: 'Yeon Sung', cursive;
+  /* font-family: 'Jua', sans-serif; */
+}
+
+.text-basic{
+  font-family: 'Yeon Sung', cursive;
+  font-size: 20px;
+  text-align: center;
+  width: 300px;
+  border: 3px solid;
+  border-color: #BDBDBD;
+  border-radius: 5px;
+}
+
+#list-body{
+  text-align: center;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td{
+  border: 3px solid white;
+  border-radius: 0.5em;
+  padding: 5px 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+th{
+  background-color: #BDBDBD;
+  color: #424242;
+  border: 3px solid #BDBDBD;
+  border-radius: 0.5em;
+  padding: 5px 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+button{
+  font-family: 'Yeon Sung', cursive;
+  color : #424242;
+  right: 50px;
+  text-align: center;
+  background-color: white;
+  border: 3px solid;
+  border-color: #BDBDBD;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 0px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover{
+  font-family: 'Yeon Sung', cursive;
+  color: white;
+  right: 50px;
+  text-align: center;
+  background-color: #424242;
+  border-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 체크박스와 연결된 라벨 커스텀 */
+/* input[type="checkbox"] + label{
+  display: inline-block;
+  border: 2px solid white;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  border-radius: 0.2em;
+  position: relative;
+  vertical-align: middle;
+} */
+
+/* 체크박스와 연결된 라벨 클릭시 상태 */
+/* input[type="checkbox"]:checked + label{
+  cursor: pointer;
+  border: 2px solid white;
+  width: 13px;
+  height: 13px;
+  background-color: white;
+} */
+
+/* 기존의 체크박스 숨기기 */
+/* input[type="checkbox"]{
+  display: none;
+} */
+
+input[type="checkbox"]{
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.btn-area{
+  margin: 10px;
+}
+
+.write-box{
+  margin: 10px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="color.js"></script>
+    <title>필수로_해야할_것</title>
+    <link rel="stylesheet" href="연습장용.css?after">
+  </head>
+  <body>
+    <input id=day_night type="button" value="🌜 야간 모드 🌜" onclick="
+    day_nightHandler(this);
+    ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id=메인으로 type="button" value="🏠 메인으로 이동 🏠" onclick="location.href='index.html'"");
+    ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id=다른곳 type="button" value="🚀 유용한 링크 모음 🚀" onclick="location.href='유용한 링크 모음.html'"");
+    ">
+    <br><br>
+    <input id=생활코딩 type="button" value="💻 생활코딩 바로가기 💻" title="생활코딩 사이트로 이동" onclick="window.open('https://opentutorials.org/course/1');
+    ">
+    <h1>🔎 필수로 해야할 것 🔍</h1>
+    <!--<input id="day_night" type="button" value="야간 모드" onclick="
+      if (document.querySelector('#day_night').value === '야간 모드'){
+        document.querySelector('body').style.backgroundColor = '#424242';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#day_night').value = '주간 모드';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#day_night').value = '야간 모드';
+      }
+    ">-->
+    <ul>
+      <h2><li><u><a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=ko" target="_blank">Web Server For Chrome</a></u> 설치</li></h2>
+      <h2><li><u><a href="https://atom.io/" target="_blank">Atom</a></u>, <u><a href="https://code.visualstudio.com/" target="_blank">비쥬얼 스튜디오 코드</a></u> 설치 (택1) 📌</li></h2>
+      <h2><li><u><a href="https://bitnami.com/stack/wamp/installer" target="_blank">Apache's Web Server</a></u> 설치하기 (<!--PW : hee68739601-->기본 : 127.0.0.1) 📌</li></h2>
+        C:\Bitnami\wampstack-8.1.5-0\apache2\htdocs → 파일 전부 삭제 및 내 html로 대체
+      <h2><li>항상 <u><a href="https://github.com/" target="_blank">Github</a></u>에 백업하기 📌</li></h2>
+      <h2><li><u><a href="https://jquery.com/download/" target="_blank">jQuery</a></u> 다운로드 (반복문을 대신해서 처리하는 역할) 📌</li></h2>
+        <b><u><a href="https://developers.google.com/speed/libraries#jquery" target="_blank">Google jQuery 코드 CDN</b></a></u> 복사 후 사용 추천
+      <h2><li><u><a href="https://ko.reactjs.org/docs/getting-started.html" target="_blank">React</a></u> ← React 환경 다운 or <u><a href="https://stackblitz.com/edit/react-u1rfzr" target="_blank">Stackblitz</a></u>를 통해 온라인 실행</li></h2>
+      <h2><li><u><a href="https://nodejs.org/ko/" target="_blank">Node.js</a></u> ← LTS 버전 다운 📌</li></h2>
+        <u>Node.js 실행방법</u><br><br>
+        윈도우+R → cmd 실행 → c(chage)d(diretory) /띄어쓰기/ 자신의 Node.js가 있는 폴더 경로 입력 → dir(현재 위치한 폴더 내의 파일 확인) → node /띄어쓰기/ js파일명.js → Ctrl+C(x2)로 Exit (cd ..은 바로 상위 폴더로 이동)
+      <h2><li><u><a href="https://pm2.keymetrics.io/docs/usage/quick-start/" target="_blank">PM2 사용법</a></u> → Node.js 관리 프로그램</li></h2>
+        PM2 검색 후 npm install pm2 -g 텍스트를 복사, cmd에 붙여넣어서 설치 (cmd 사용)<br>
+        pm2 monit을 이용하여 현재 서버 상태를 볼 수 있고 Q로 나감<br>
+        해당 서버를 끄고 싶다면 pm2 list로 확인 후 'pm2 stop 서버이름'으로 끄기 가능<br>
+        해당 서버를 다시 열고 pm2를 이용하여 관리하고 싶다면, 'pm2 start main.js --watch'로 실행<br>
+        'pm2 start main.js --watch --no-daemon'으로 백그라운드 실행 X (실행은 정상)<br>
+        'pm2 kill' 로 pm2에 관련된 모든 것을 끄기<br>
+        'pm2 start main.js --watch --ignore-watch="data/*" --no-daemon' : 갱신을 위해 꺼지는 것을 방지
+        <h2><li><u><a href="https://www.python.org/" target="_blank">Python 설치</a></u> 📌</li></h2>
+        cmd를 이용해서 python 입력 후 실행 / exit()를 입력하면 종료<br>
+        해당 .py가 있는 경로를 'cd ....' 설정 후, 실행하면 cmd에 결과가 도출됨 (python을 치지 않더라도 열림)<br><br>
+        <b>↓ <u>Python과 아파치 서버 연동하는 법</u> ↓</b><br><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BEghLFbPtDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ul>
+
+    <!--<ul>
+      <script>
+        function two(){
+          document.write('<li>2-1</li>');
+          document.write('<li>2-2</li>');
+          document.write('<li>3</li>');
+        }
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+      </script>
+    </ul>-->
+
+  </body>
+  </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      a{
+        text-decoration: none;
+        color: navy;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <!--<input id="day_night" type="button" value="야간 모드" onclick="
+      if (document.querySelector('#day_night').value === '야간 모드'){
+        document.querySelector('body').style.backgroundColor = '#424242';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#day_night').value = '주간 모드';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#day_night').value = '야간 모드';
+      }
+    ">-->
+    <input type="button" value="야간 모드" onclick="
+      var target = document.querySelector('body')
+      if (this.value === '야간 모드'){
+        target.style.backgroundColor = '#424242';
+        target.style.color = 'white';
+        this.value = '주간 모드';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = '야간 모드';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'navy';
+          i = i + 1;
+        }
+      }
+    ">
+
+    <ol>
+      <h2><b><li><a href='index.html'>홈으로</li></b></h2>
+      <h2><b><li><a href='3. 학원 커리큘럼.html'>학원 시간표</li></b></h2>
+      <h2><b><li><a href='4. 알아두면 유용한 것.html'>링크모아</li></b></h2>
+    </ol>
+  </body>
+</html>

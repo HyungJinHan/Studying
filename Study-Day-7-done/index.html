@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="color.js"></script>
+    <title>연습장</title>
+    <link rel="stylesheet" href="연습장용.css?after">
+  </head>
+  <body>
+    <input id=day_night type="button" value="야간 모드" onclick="
+    day_nightHandler(this);
+
+    ">
+    <br><br>
+    <input id=생활코딩 type="button" value="생활코딩 바로가기" title="생활코딩 사이트로 이동" onclick="window.open('https://opentutorials.org/course/1');
+    ">
+    <h1>코딩 연습장</h1>
+    <!--<input id="day_night" type="button" value="야간 모드" onclick="
+      if (document.querySelector('#day_night').value === '야간 모드'){
+        document.querySelector('body').style.backgroundColor = '#424242';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#day_night').value = '주간 모드';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#day_night').value = '야간 모드';
+      }
+    ">-->
+    <div id="grid">
+    <ul>
+      <h2><li><a href='index2.html' class="menu">끄적끄적 (엉망)</a></li></h2>
+      <h2><li><a href='5. 필수로 해야할 것.html' class="menu">필수로 해야할 것</a></li></h2>
+      <h2><li><a href='6. 유용한 링크 모음.html' class="menu">유용한 링크 모음</a></li></h2>
+      <h2><li><a href='객체.html' target="_blank" class="tab">객체 연습</a></li></h2>
+      <h2><li><a href='조건문.html' target="_blank" class="tab">조건문 연습</a></li></h2>
+      <h2><li><a href='array & loop.html' target="_blank" class="tab">배열 & 반복 연습</a></li></h2>
+      <h2><li><a href='boolean.html' target="_blank" class="tab">True (참) & False (거짓)</a></li></h2>
+      <h2><li><a href='grid.html' target="_blank" class="tab">그리드 연습</a></li></h2>
+      <h2><li><a href='매개변수 & 인자 & 출력.html' target="_blank" class="tab">매개변수와 인자, 출력 연습</a></li></h2>
+    </ul>
+      <div id="article">
+        <h2>간단하게 메모하는 곳</h2>
+        <div id="pic">
+          <p><img id="myImage" src="히맨 메인.gif" width="300px"><br><br>
+          <b>→</b> <button class="heman" onclick="document.getElementById('myImage').src='히맨 메인.gif'">HEYYEYAAEYAAA</button>
+          <button class="heman" onclick="document.getElementById('myImage').src='히맨 껄껄.gif'">HAHAHAHAHA</button> <b>←</b><br><br>
+          <b>→</b> <button class="heman" onclick="document.getElementById('myImage').src='히맨 윙크.gif'">Death Wink</button>
+          <button class="heman" onclick="document.getElementById('myImage').src='히맨 윙크2.gif'">Soft Wink</button>
+          <button class="heman" onclick="document.getElementById('myImage').src='히맨 펀치.gif'">Super Punch</button> <b>←</b>
+        </p>
+        </div>
+        변수(Variable)를 사용할 때는 가급적이면 var을 변수 앞에 입력하여 사용!<br>
+        예시 a = 1; / console.log(a); → X / var a = 1; console.log(a); → O<br><br>
+        JavaSctipt에서 템플릿 (Template) 사용 : `내용` (~ 밑)<br>
+        예문 : var letter = `Dear ${name} 내~~ ${name} ~~~~ ${name} ~용`<br>
+        이 사이에서 엔터를 쳐서 줄 바꿈을 해도 오류 X
+      </div>
+    </div>
+
+    <!--<ul>
+      <script>
+        function two(){
+          document.write('<li>2-1</li>');
+          document.write('<li>2-2</li>');
+          document.write('<li>3</li>');
+        }
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+      </script>
+    </ul>-->
+
+    <p><div id="disqus_thread">
+    <script>
+    var disqus_config = function () {
+        this.page.identifier = 'a unique identifier for each page where Disqus is present';
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ggujeok.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6266c7537b967b11798c6bfe/1g1gnl7vu';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  </body>
+  </html>

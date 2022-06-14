@@ -1,0 +1,101 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body{
+  margin: 0;
+  color: #FFFFFF;
+  background-color: #424242;
+  /* font-family: 'Yeon Sung', cursive; */
+  font-family: 'Jua', sans-serif;
+}
+
+.container-box{
+  position: relative;
+  padding-bottom: 30px;
+  width: 800px;
+  height: auto;
+  border: solid 5px #fff;
+  border-radius: 1em;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.contents h1{
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size: 45px;
+  letter-spacing: 3px;
+}
+
+.contents ol{
+  margin-top: 50px;
+}
+
+.contents li{
+  width: 80%;
+  font-size: 25px;
+  margin-left: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-bottom: solid 3px #FFFFFF;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.inputlist{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.inputlist h2{
+  margin-top: 10px;
+  margin-top: 0;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+input{
+  text-align: center;
+  /* font-family: 'Yeon Sung', cursive; */
+  font-family: 'Jua', sans-serif;
+  font-weight: 100;
+  font-size: 25px;
+  margin-top: 20px;
+  width: 550px;
+  height: 40px;
+  border-radius: 0.3em;
+  border-color: #2E2E2E;
+  border: 3px;
+}
+
+button{
+  /* font-family: 'Yeon Sung', cursive; */
+  font-family: 'Jua', sans-serif;
+  color: #424242;
+  position: absolute;
+  right: 25px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-color: #2E2E2E;
+  border-style: solid;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+button:hover{
+  /* font-family: 'Yeon Sung', cursive; */
+  font-family: 'Jua', sans-serif;
+  color: white;
+  position: absolute;
+  right: 25px;
+  text-align: center;
+  background-color: #424242;
+  border-color: white;
+  border-style: solid;
+  border-radius: 0.8em;
+  cursor: pointer;
+}

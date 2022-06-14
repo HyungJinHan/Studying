@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css?after">
+    <title>ToDoList(V2)</title>
+  </head>
+  <body>
+    <h1>To Do List (V2)</h1>
+    <div class="write-box">
+      <input type="text" placeholder="내용을 입력해주세요." class="text-basic">
+      <button type="button" id="btnAdd">추가</button>
+    </div>
+    <table class="list-table"> <!-- 표 작성 -->
+      <colgroup> <!-- 표 칼럼 그 작성 -->
+        <col width="10%"> <!-- 1번 항목 넓이 -->
+        <col width="90%"> <!-- 2번 항목 넓이 -->
+      </colgroup>
+      <thead class="list-name"> <!-- 생성된 표의 머리글 그룹 나누기 -->
+        <tr>
+          <th>Done</th> <!-- 1번 항목의 내용 -->
+          <th>What Should I Do?</th> <!-- 2번 항목의 내용 -->
+        </tr>
+      </thead>
+      <tbody id="list-body"> <!-- 생성된 표의 본문 그룹 나누기 -->
+        <tr>
+          <td>
+            <input type="checkbox" id="btn-chk"> <!-- 1번 항목의 내용 -->
+            <!-- <label id="btn-label" for="btn-chk"></label> --> <!-- 체크박스 커스텀을 위한 라벨 작업 -->
+          </td>
+          <td>
+            오늘 뭐하지?
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="btn-area">
+      <button type="button" id="DeleteSel">선택 항목 삭제</button>
+      <button type="button" id="btnDelAll">전체 항목 삭제</button>
+    </div>
+    <script src="main.js?after"></script>
+    <!-- 출처 https://im-developer.tistory.com/22 -->
+  </body>
+</html>

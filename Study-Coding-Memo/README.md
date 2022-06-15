@@ -11,4 +11,4 @@
 - (수정 & 추가) 글씨체 수정 및 로또 번호 생성기 추가
 - (추가) Color Scripter를 활용한 Java 연습장 추가
 - (추가) Login시, document.addEventListener를 통해 keydown(enter) 적용으로 엔터입력 시 로그인 및 event.preventDefault 입력으로 새로고침 방지
-- [코딩 연습장 바로가기](https://hyungjinhan.github.io/Study-Coding-Memo/index.html)
+- [코딩 연습장 바로가기](https://hyungjinhan.github.io/Studying/Study-Coding-Memo/index.html)
